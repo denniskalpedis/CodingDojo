@@ -1,0 +1,58 @@
+#main {
+    width: 970px;
+    padding: 3px;
+    background: darkblue;
+}
+
+#header {
+    background: red;
+    color: white;
+    padding: 1px 20px;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+#navigation {
+    background: teal;
+    color: lightblue;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 10px;
+    text-decoration: underline;
+    padding: 15px;
+    vertical-align: top;
+}
+
+a:link{
+    color: lightblue;
+}
+a:visited{
+    color: lightblue;
+}
+
+
+#content{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 15px;
+    width: 660px;
+    margin: 10px 0px;
+}
+
+.content_list li {
+    margin: 10px 0px;
+}
+
+#footer {
+    background-color: grey;
+    color: white;
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin: 10px;
+}
+code {
+    color: rgb(80, 80, 255);
+    font-family: initial;
+}
