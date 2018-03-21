@@ -1,0 +1,125 @@
+*{
+    font-family: sans-serif;
+}
+.title {
+    padding-top: 1px;
+    padding: 8px 20px;
+    background: linear-gradient(#b0aeb2, #878593, #b0aeb2);
+    margin: 0px 15px 0px 15px;
+    color: white;
+    font-size: 21px;
+    font-weight: 500;
+}
+#page {
+    width: 970px;
+    height: 960px;
+    background: radial-gradient(white, #6f5964, black);
+    
+}
+#header {
+    background: white;
+    /* padding: 1px 25px; */
+    width: 970px;
+}
+#name {
+    background: white;
+    padding: 1px 25px;
+    display: inline-block;
+    font-size: 35px;
+    font-weight: 500;
+}
+#title {
+    padding: 0px 25px 0px 370px;
+    display: inline-block;
+    text-align: right;
+    background: white;
+    position: absolute;
+    font-size: 21px;
+    font-weight: bold;
+}
+.title_tech {
+    padding-top: 1px;
+    padding: 8px 20px;
+    background: linear-gradient(#b0aeb2, #878593, #b0aeb2);
+    margin: 0px 15px 0px 15px;
+    color: white;
+    font-size: 17px;
+    font-weight: 200;
+}
+#about {
+    display: inline-block;
+    position: absolute;
+    padding: 0px 0px 0px 33px;
+}
+#information {
+    padding: 0px 20px 10px 18px;
+    background: linear-gradient(to right, #fefefe , #dacbda);
+    margin: 0px 15px;
+    display: inline-block;
+    width: 430px;
+}
+#picture {
+    display: inline-block;
+    border-style: solid;
+    border-width: 6px;
+    border-color: lightgray;
+}
+#top {
+    margin: 20px;
+    width: 970px;
+}
+.contacts {
+    position: relative;
+    display: inline-block;
+    width: 310px;
+    height: 400px;
+    padding: 0px 5px 0px 5px;
+}
+.ref_images {
+    display: inline-block;
+    width: 300px;
+    padding: 0px 5px 0px 15px;
+    margin: -4px 0px 0px 0px;
+}
+.ref_info {
+    vertical-align: top;
+    display: inline-block;
+    width: 260px;
+    height: 190px;
+    padding: 10px;
+    background: linear-gradient(to right, #fefefe , #dacbda);
+    margin: -8px 15px 0px 15px;
+    text-align: justify;
+}
+.language_pics {
+    vertical-align: top;
+    display: inline-block;
+    width: 260px;
+    padding: 10px;
+    background: linear-gradient(to right, #fefefe , #dacbda);
+    margin: 0px 15px;
+    text-align: left;
+}
+#bottom {
+    background: white;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    margin: 112px 0px 0px 0px;
+}
+.languages {
+    margin: 4px;
+}
+.ref_link {
+    background: #407d61;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    display: inline;
+    padding: 6px;
+    margin: 86px;
+    font-size: 12px;
+    box-shadow: 4px 4px 8px #7c817f;
+}
+a:link, a:visited {
+    color: black;
+}
