@@ -33,16 +33,13 @@ input {
     font-size: 18px;
     padding: 0px 0px 0px 0px;
 }
-#header_right a:link {
-    color: #c7a71b;
-}
-#header_right a:visited {
+#header_right a:link, #header_right a:visited {
     color: #c7a71b;
 }
 .black_font {
     color: black;
 }
-input[name="go"] {
+input[type="submit"] {
     background: #145274;
     width: 40px;
     color: white;
@@ -50,11 +47,11 @@ input[name="go"] {
     margin: 0px 0px 0px 10px;
     box-shadow: 3px 3px 3px #1e2428;
 }
-input[name="search_txt"] {
+input[type="text"] {
     height: 45px;
     font-size: 19px;
 }
-#search {
+#header form {
     background: #444444;
     border-radius: 15px;
     padding: 15px 40px 20px 0px;
