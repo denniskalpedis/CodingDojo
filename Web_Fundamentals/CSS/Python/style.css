@@ -13,7 +13,6 @@ input {
 }
 #wrapper {
     width: 1000px;
-    /* height: 950px; */
     background: linear-gradient(#145274, #1976A8);
 }
 #header img {
@@ -103,11 +102,6 @@ ul#navigation li a.link {
     padding: 0px 0px 0px 0px;
     vertical-align: 80px;
 }
-/* #main p {
-    display: inline-block;
-    color: white;
-    font-size: 18px;
-} */
 #content {
     display: inline-block;
     color: white;
@@ -116,7 +110,7 @@ ul#navigation li a.link {
     width: 617px;
     text-align: center;
 }
-.code {
+#specialText {
     color: #ffd848;
     font-style: italic;
 }
