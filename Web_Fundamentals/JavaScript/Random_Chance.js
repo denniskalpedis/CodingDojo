@@ -1,9 +1,5 @@
 function playSlots(quarters, leaveAt) {
     for (quarters; quarters > 0; quarters--) {
-        if (quarters >= leaveAt){
-            console.log("you are leaveing with " + quarters + " quarters");
-            return;
-        } 
         if ((Math.trunc(Math.random()*100)+1) == 100) {
             var winnings = Math.trunc(Math.random()*50) + 51;
             console.log("you win " + winnings + " quarters. CONGRATS!");
@@ -12,6 +8,10 @@ function playSlots(quarters, leaveAt) {
         } else {
             console.log("You Lost. You have " + (quarters - 1) + " left");
         }
+        if (quarters >= leaveAt){
+            console.log("you are leaveing with " + quarters + " quarters");
+            return;
+        } 
     }
     return 0;
 }
