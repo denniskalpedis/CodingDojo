@@ -1,0 +1,29 @@
+form input {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+table { 
+    border-collapse: collapse;
+    
+}
+thead tr {
+    border: 2px solid black;
+}
+
+th {
+    width: 200px;
+    text-align: left;
+}
+#wrapper tr #content {
+    /* text-align: left; */
+    border: 0px;
+}
+#form {
+    width: 400px;
+    text-align: right;
+}
+#form h1 {
+    text-align: left;
+    border-bottom: 3px solid black;
+}
