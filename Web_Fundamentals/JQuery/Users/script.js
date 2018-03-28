@@ -7,8 +7,7 @@ $(document).ready(function(){
         arr = info.split("&");
         for(var i = 0; i < arr.length; i++){
             temp = arr[i].split("=");
-            console.log($(this).parent().parent('th[name="' + temp[0] + '"]'));
-            $('th[name="' + temp[0] + '"]').append(temp[1] + "<br>");
+            $("#content").append("<th name='" + temp[0] + "'>" + temp[1] + "</th>");
         }
         return false;
     })
