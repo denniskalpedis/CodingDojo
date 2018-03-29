@@ -1,0 +1,82 @@
+/* * {
+    outline: 1px solid red;
+} */
+#wrapper {
+    font-size: 20px;
+    width: 1000px;
+    height: 750px;
+    margin: 15px;
+    /* background: gray; */
+}
+#wrapper h1 {
+    text-align: center;
+}
+#form {
+    padding: 15px;
+    width: 400px;
+    display: inline-block;
+}
+#form p {
+    display: inline-block;
+    width: 140px;
+}
+#form input {
+    height: 20px;
+}
+#form textarea {
+    height: 150px;
+    width: 300px;
+}
+#cards {
+    vertical-align: top;
+    margin: 15px;
+    width: 525px;
+    height: 600px;
+    overflow: auto;
+    display: inline-block;
+}
+.contact_card {
+    position: relative;
+    width: 450px;
+    background: grey;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    height: 175px;
+    overflow: auto;
+    display: table;
+}
+.contact_card p {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 75%;
+    height: 80%;
+    margin: auto;
+    overflow-y: auto;
+}
+.contact_card h5 {
+    vertical-align: bottom;
+    margin: 0px;
+}
+/* #cards .p {
+    visibility: hidden;
+} */
+.contact_card .back {
+    visibility: hidden;
+}
+
+#cards::-webkit-scrollbar, .contactcard::-webkit-scrollbar, .back::-webkit-scrollbar {
+    width: 10px;
+}
+#cards::-webkit-scrollbar-track, .contactcard::-webkit-scrollbar-track, .back::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+#cards::-webkit-scrollbar-thumb, .contactcard::-webkit-scrollbar-thumb, .back::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+#cards::-webkit-scrollbar-thumb:hover, .contactcard::-webkit-scrollbar-thumb:hover, .back::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

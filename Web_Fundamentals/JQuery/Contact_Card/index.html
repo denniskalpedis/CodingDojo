@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Card</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Contact Cards!</h1>
+        <div id="form">
+            <form id="addcontact" action="/" method="post">
+                <p>First Name: </p><input type="text" name="first_name" placeholder="First Name"><br>
+                <p>Last Name: </p><input type="text" name="last_name" placeholder="Last Name"><br>
+                <p>Description: </p><br>
+                <textarea name="description"></textarea><br>
+                <input type="submit">
+            </form>
+        </div>
+        <div id="cards"></div>
+    </div>
+</body>
+</html>
