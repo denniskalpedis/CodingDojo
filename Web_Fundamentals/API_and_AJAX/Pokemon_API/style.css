@@ -1,0 +1,11 @@
+.pokemon {
+    width: 75px;
+    display: inline-block;
+}
+.pokemon img {
+    width: 75px;
+    display: inline-block;
+}
+#wrapper div {
+    display: inline-block;
+}
