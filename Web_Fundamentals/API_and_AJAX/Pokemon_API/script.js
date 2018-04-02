@@ -13,10 +13,20 @@ $(document).ready(function(){
     //     if (--i) myLoop(i);
     //     }, 3000)
     //  })(15);
-    for(var i = 1; i <= 151; i++){
-        $('#wrapper').append('<div class="pokemon"><img src=https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + i +'.png alt="pokemon" back="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/' + i + '.png" class="images">');
+    //}
+    function getImages(i){
+        $.get( "https://pokeapi.co/api/v2/pokemon/" + (i) + "/", function( data ) {
+            $('#pokemon' + i)
+                .html(data.name + '<img src=' + data.sprites.front_default + ' alt="pokemon" back="' + data.sprites.back_default + '" class="images">');
+        }, "json" );
     }
-    $(".pokemon").on({
+    for(var i = 1; i <= 6; i++){ //change 6 to 151 for all
+        $('#wrapper').append('<div id="pokemon' + i + '">');
+        getImages(i);
+        //$('#wrapper').append('<div class="pokemon"><img src=https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + i +'.png alt="pokemon" back="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/' + i + '.png" class="images">');
+        
+    }
+    $(".pokemon").on({  //just tying old assignments in
         mouseenter: function() {
             temp = $(this).attr("src");
             $(this).attr("src", $(this).attr("back"));

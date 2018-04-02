@@ -1,9 +1,10 @@
-.pokemon {
-    width: 75px;
+[id^='pokemon'] {
+    width: 90px;
     display: inline-block;
+    text-align: center;
 }
-.pokemon img {
-    width: 75px;
+[id^='pokemon'] img {
+    width: 90px;
     display: inline-block;
 }
 #wrapper div {
