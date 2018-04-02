@@ -1,5 +1,5 @@
 def compare_lists(a,b) :
-    if (set(a) == set(b)):
+    if (a == b):
         print "The lists are the same."
     else :
         print "The lists are not the same."
