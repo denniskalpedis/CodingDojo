@@ -9,6 +9,7 @@ class Bike(object):
         return self
     
     def ride(self):
+        print "riding..."
         self.miles += 10
         return self
     
