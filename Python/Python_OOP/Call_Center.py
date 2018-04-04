@@ -48,10 +48,10 @@ class Call_Center(object):
         return self
 
     def sort_by_time(self):
-        self.calls.sort(key = lambda x: x.time)
+        self.calls.sort(key = lambda x: x.time) #sort using the key, use lambda function passing in the call to 'x' and checking by 'x.time'
         return self
 
 callcenter = Call_Center()
-callcenter.add_call("tom", "9999999999", "worse", "20:15:39").add_call("tim", "8888888888", "badder").add_call("joe", "7777777777", "bad").info().remove_by_number("7777777777").info()
+callcenter.add_call("tom", "9999999999", "worse", "20:15:39").add_call("john", "6666666666", "worse", "19:15:39").add_call("tim", "8888888888", "badder").add_call("joe", "7777777777", "bad").info().remove_by_number("7777777777").info()
 print "\n"
 callcenter.sort_by_time().info()
