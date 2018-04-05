@@ -41,7 +41,6 @@ class Call_Center(object):
         return self
 
     def remove_by_number(self, number):
-        #for call in calls:
         new_calls = [x for x in self.calls if number not in x.caller_phone]
         self.calls = new_calls
         self.queue_size = len(self.calls)
