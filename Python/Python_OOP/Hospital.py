@@ -38,7 +38,7 @@ class Hospital(object):
         for patient in self.patients:
             if patient.name.lower() == name.lower():
                 print
-                print "Removed {} from the hospital room #{}".format(patient.name, patient.bed_number)
+                print "Removed {} from the hospital bed #{}".format(patient.name, patient.bed_number)
                 self.bed_numbers[patient.bed_number] = "empty"
                 self.patients.remove(patient)
                 return self
@@ -55,8 +55,5 @@ class Hospital(object):
     
 
 hospital1 = Hospital("General Hospital", 5)
-hospital1.admit("Joe", "none").admit("Tom", "bees").admit("Dennis", "Peanuts").admit("Tim", "none").admit("Alex", "pink").admit("Frank", "Mercury").patient_info()
+hospital1.admit("Joe", "none").admit("Tom", "bees").admit("Dennis", "Peanuts").admit("Tim", "none").admit("Alex", "Tree nut").admit("Frank", "Wheat").patient_info()
 hospital1.discharge("dennis").admit("Frank", "Mercury").patient_info()
-
-
-        
