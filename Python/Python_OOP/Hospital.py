@@ -18,8 +18,6 @@ class Hospital(object):
         self.bed_numbers = dict.fromkeys(range(1,capacity+1), "empty")
 
     def admit(self, name, allergies, bed_number = "none"):
-        #for key, value in self.bed_number.iteritems():
-        #    if value = "empty"
         for key in sorted(self.bed_numbers):
             if self.bed_numbers[key] == "empty":
                 self.bed_numbers[key] = "taken"
