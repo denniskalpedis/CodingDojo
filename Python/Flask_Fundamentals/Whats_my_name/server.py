@@ -12,6 +12,7 @@ def create_user():
     # to access the data that the user input into the fields we use request.form['name_of_input']
     name = request.form['name']
     print name
+    print request.form
     return redirect('/')
 
 app.run(debug=True)

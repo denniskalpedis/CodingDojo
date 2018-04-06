@@ -1,0 +1,39 @@
+/* .class {
+    vertical-align: top;
+    display: block;
+} */
+
+#main {
+    width: 650px;
+}
+
+.label {
+    display: inline-block;
+    width: 29%;
+}
+
+#no_name {
+    color: red;
+}
+
+#input_button {
+    width: 81%;
+    text-align: center;
+}
+
+.class {
+    width: 50%;
+}
+
+.input_boxes {
+    width: 50%;
+}
+
+p {
+    display: inline-block;
+    width: 10%;
+}
+/*
+input select text-area {
+
+} */
