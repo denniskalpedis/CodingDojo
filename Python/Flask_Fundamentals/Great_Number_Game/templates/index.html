@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Great Number Game</title>
+    <style>
+    #wrapper {
+        width: 100%;
+        text-align: center;
+    }
+
+    #guess {
+        color: white;
+        width: 300px;
+        margin: 0 auto;
+        height: 300px;
+        padding: auto 0;
+        font-weight: bold;
+        outline: 2px solid black;
+        background-color: {{ color }};
+        display: {{ display }};
+    }
+
+    input[name='submit'] {
+        box-shadow: 2px 2px 2px;
+
+    }
+
+    #guess_form {
+        visibility: visible;
+    }
+
+    #reset {
+        visibility: {{ hidden }};
+    }
+
+    .hide_this {
+        display: {{ hide_this }}
+    }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Welcome to the Great Number Game</h1>
+        <p>I am thinking of a number between 1 and 100</p>
+        <p>Take a guess!</p>
+        <br>
+        <div id="form">
+            <form method="post" id="guess_form">
+                <div id="guess">
+                    <p>{{ number }}</p>
+                    <p>{{ guess }}</p>
+                    {% if winner %}
+                        <input type="submit" value="Play again!" name="submit" id="reset">
+                    {% endif %}
+                </div><br>
+                {% if not winner %}
+                    <input type="text" name="text">
+                    <input type="submit" value="submit" name="submit">
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</body>
+</html>
