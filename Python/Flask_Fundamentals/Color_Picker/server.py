@@ -13,6 +13,6 @@ def get_info():
     b = request.form['blue']
     color = "rgb(" + r + ", " + g + ", " + b + ")"
     
-    return render_template('/index.html', color = color, r = r, g = g, b = b)
+    return render_template('/index.html', color = color)
 
 app.run(debug=True)
