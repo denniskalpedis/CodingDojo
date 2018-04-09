@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration form</title>
+    <style>
+    .error {
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="error">{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    Register!
+    <form action="/register" method="post">
+        <p>E-Mail: <input type="text" name="email"></p>
+        <p>First Name: <input type="text" name="first_name"></p>
+        <p>Last Name: <input type="text" name="last_name" id=="last_name"></p>
+        <p>Password: <input type="password" name="password" id="password"></p>
+        <p>Confirm Password: <input type="password" name="confirm_password" id="confirm_password"></p>
+        (Passwords need to be at least 8 characters, and 1 upper case and 1 number.)
+        <p><input type="submit"></p>
+    </form>
+</body>
+</html>
