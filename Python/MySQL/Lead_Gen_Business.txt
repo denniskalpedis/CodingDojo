@@ -99,8 +99,8 @@ SELECT concat_ws(" ", clients.first_name, clients.last_name) as client_name,
     YEAR(billing.charged_datetime) as year_charge
 FROM clients
 JOIN billing ON clients.client_id = billing.client_id
-GROUP BY month_charge, year_charge
-ORDER BY billing.charged_datetime;
+GROUP BY client_name, month_charge, year_charge
+ORDER BY clients.client_id, billing.charged_datetime;
 
 10. Write a single query that retrieves all the sites that each client owns.
 Group the results so that each row shows a new client. It will become clearer
