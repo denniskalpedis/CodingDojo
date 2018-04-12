@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EMail List</title>
+    <style>
+        form {
+            display: inline;
+        }
+        input {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    EMAILS!
+    
+    {% for email in emails %}
+    <form action="/delete" method='post'>
+      <p>{{ email['id'] }} - {{ email['email'] }} - {{ email[created_at] }}  <input type="hidden" name="id" value="{{ email['id'] }}"> <input type="submit" value="Delete!"> </p>
+    </form>
+    {% endfor %}
+    
+</body>
+</html>

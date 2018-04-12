@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+    <title>Email Verification</title>
 </head>
 <body>
-    <form action="/success" method='POST'>
-        E-Mail: <input type="text">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p class="error">{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form action="/process" method='POST'>
+        E-Mail: <input type="text" name="email">
         <input type="submit" value="Enter E-mail">
     </form>
 </body>
