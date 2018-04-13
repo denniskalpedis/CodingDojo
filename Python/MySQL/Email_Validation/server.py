@@ -36,10 +36,15 @@ def success():
 
 @app.route('/delete', methods=['POST'])
 def delete():
-    print request.form['id']
+    query = "SELECT email FROM emails WHERE id = :id"
+    data = {'id': request.form['id']}
+    del_email = mysql.query_db(query, data)
+    print del_email
     query = "DELETE FROM emails WHERE id = :id"
     data = {'id': request.form['id']}
     mysql.query_db(query, data)
+    print del_email[0]['email']
+    flash("The E-Mail {} was successfully deleted from the database!".format(del_email[0]['email']))
     return redirect('/success')
 
 app.run(debug=True)
