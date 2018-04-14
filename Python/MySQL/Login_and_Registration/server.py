@@ -13,13 +13,13 @@ def index():
 def process():
     email = request.form['email']
     password = request.form['password']
-    user_query = "SELECT * FROM users WHERE users.email = :email LIMIT 1"
-    query_data = {'email': email}
-    user = mysql.query_db(user_query, query_data)
+    query = "SELECT * FROM users WHERE users.email = :email LIMIT 1"
+    data = {'email': email}
+    user = mysql.query_db(query, data)
     if len(user) != 0:
         encrypted_password = md5.new(password + user[0]['salt']).hexdigest()
-        if user[0]['password'] == encrypted_password:
-            flash(user[0]['first_name'] + " " + user[0]['last_name'] + " Successfully registered!", "success!")
+        if user[0]['hashed_pw'] == encrypted_password:
+            flash(user[0]['first_name'] + " " + user[0]['last_name'] + " Successfully logged in!", "success!")
             session['login'] = user[0]['id']
             return redirect('/success')
         else:
@@ -56,7 +56,7 @@ def register():
         password = request.form['password']
         salt =  binascii.b2a_hex(os.urandom(15))
         hashed_pw = md5.new(password + salt).hexdigest()
-        query = "INSERT INTO users (first_name, last_name, email, password, salt, created_at, updated_at) VALUES (:first_name, :last_name, :email, :hashed_pw, :salt, NOW(), NOW())"
+        query = "INSERT INTO users (first_name, last_name, email, hashed_pw, salt, created_at, updated_at) VALUES (:first_name, :last_name, :email, :hashed_pw, :salt, NOW(), NOW())"
         data = { 'first_name': first_name, 'last_name': last_name, 'email': email, 'hashed_pw': hashed_pw, 'salt': salt}
         mysql.query_db(query, data)
         flash(first_name + " " + last_name + " Successfully registered!", "success!")
@@ -69,5 +69,19 @@ def register():
 
 @app.route('/success')
 def success():
+    if 'login' not in session:
+        flash("You are not logged in!")
+        return redirect('/')
+    query = "SELECT * FROM users WHERE users.id = :id LIMIT 1"
+    data = {'id': session['login']}
+    user = mysql.query_db(query, data)
+    flash("Hello {} {}!".format(user[0]['first_name'], user[0]['last_name']))
     return render_template('success.html')
 
+@app.route('/logout', methods=['POST'])
+def logout():
+    session.pop('login')
+    flash("You were logged out!", "success!")
+    return redirect('/')
+
+app.run(debug=True)

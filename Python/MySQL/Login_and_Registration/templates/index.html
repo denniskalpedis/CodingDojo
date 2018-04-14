@@ -19,8 +19,8 @@
         {% endwith %}
         <div id="login">
             <form action="/login" method="post">
-                E-Mail: <input type="text">
-                Password: <input type="text">
+                E-Mail: <input type="text" name="email">
+                Password: <input type="password" name="password">
                 <input type="submit" value="Login">
             </form>
         </div>
@@ -28,9 +28,9 @@
             <form action="/register" method="post">
                 First Name: <input type="text" name="first_name">
                 Last Name: <input type="text" name="last_name">
-                E-Mail: <input type="text" name="emai">
-                Password: <input type="text" name="password">
-                Password Conformation: <input type="text" name="confirm_password">
+                E-Mail: <input type="text" name="email">
+                Password: <input type="password" name="password">
+                Password Conformation: <input type="password" name="confirm_password">
                 <input type="submit" value="Register">
             </form>
         </div>
