@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, session, redirect, url_for
+from flask import Flask, render_template, request, flash, session, redirect
 import re, md5, os, binascii
 from mysqlconnection import MySQLConnector
 app = Flask(__name__)
@@ -7,7 +7,6 @@ app.secret_key='Deadpool'
 
 @app.route('/')
 def index():
-
     return render_template('index.html')
 
 @app.route('/login', methods=['POST'])

@@ -5,7 +5,6 @@ app = Flask(__name__)
 mysql = MySQLConnector(app,'emails')
 app.secret_key='Deadpool'
 
-
 @app.route('/', methods=['GET'])
 def index():
   return render_template('index.html')
