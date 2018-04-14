@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, flash, session, redirect, url_for
 import re
 app = Flask(__name__)
-app.secret_key='Deadpool'#J46297JBS4JS5
+app.secret_key='Deadpool'
 
 @app.route('/')
 def index():

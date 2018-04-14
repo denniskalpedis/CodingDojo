@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login/Register</title>
+</head>
+<body>
+    <div id="wrapper">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <div id="login">
+            <form action="/login" method="post">
+                E-Mail: <input type="text">
+                Password: <input type="text">
+                <input type="submit" value="Login">
+            </form>
+        </div>
+        <div id="register">
+            <form action="/register" method="post">
+                First Name: <input type="text" name="first_name">
+                Last Name: <input type="text" name="last_name">
+                E-Mail: <input type="text" name="emai">
+                Password: <input type="text" name="password">
+                Password Conformation: <input type="text" name="confirm_password">
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
