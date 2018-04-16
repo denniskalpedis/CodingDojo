@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wall</title>
+    <style>
+    
+    #wrapper {
+        width: 75%;
+        text-align: center;
+    }
+    
+    p {
+        text-align: right;
+    }
+
+    textarea[name="message"] {
+        display: block;
+        width: 50%;
+        margin: auto;
+    }
+
+    textarea[name="comment"] {
+        display: block;
+        width: 50%;
+        margin: auto;
+        margin-right: 100px;
+    }
+
+    #comment_block {
+        text-align: center;
+        display: block;
+        width: 50%;
+        margin: auto;
+        margin-right: 100px;
+    }
+
+    #comment_submit {
+        text-align: center;
+        display: block;
+        width: 50%;
+        margin: auto;
+        margin-right: 100px;
+    }
+
+    .comments {
+        outline: 2px solid black;
+        text-align: center;
+        display: block;
+        width: 50%;
+        margin: auto;
+        margin-right: 100px;
+    }
+    .comment {
+        margin: auto;
+        text-align: left;
+    }
+    
+    .tag {
+        text-align: right;
+        margin: auto;
+    }
+
+    .message {
+        margin: auto;
+        text-align: left;
+    }
+
+    .messages {
+        outline: 2px solid black;
+        width: 50%;
+        margin: auto;
+        padding: 15px;
+
+    }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div>
+            <p><a href="/logout">LOGOUT!</a></p>
+        </div>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        Post a Message: <br>
+        <form action="/new_message" method="post">
+            <textarea name="message" cols="30" rows="10"></textarea>
+            <input type="submit" value="Submit">
+        </form><br>
+        {% if messages_comments %}
+        {% for message in messages_comments %}
+        <div class="messages">
+            <form action="/delete" method='post'>
+                <p class="message">{{ message['message'] }}</p>
+                <p class="tag">{{ message['poster_name'] }} - {{ message['created_at'] }} </p>
+                <input type="hidden" name="id" value="{{ message['id'] }}"><br>
+                {% if message['id'] == session['login'] %}
+                <input type="submit" value="Delete!">
+                {% endif %}
+            </form>
+        </div>
+        <br>
+        {% for comment, commentor, comment_time in zip(message["comments"].split(' --|-- '), message["commenters_names"].split(' --|-- '), message["comments_times"].split(' --|-- ')) %}
+        <div class="comments">
+                <form action="/delete" method="post">
+                    <p class="comment">{{ comment }}</p>
+                    <p class="tag">{{ commentor }} - {{ comment_time }} </p>
+                    <input type="hidden" name="id" value="1"><br>
+                    {% if message['id'] == session['login'] %}
+                    <input type="submit" value="Delete!">
+                    {% endif %}
+                </form>
+            </div>
+            <br>
+        {% endfor %}
+        <p id="comment_block">Post a Comment:</p> <br>
+        <form action="/new_comment" method="post">
+            <input type="hidden" name="message_id" value="{{ message['id'] }}">
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <br><input type="submit" value="Submit" id="comment_submit">
+        </form>
+        <br>
+        {% endfor %}
+        {% endif %}
+        
+        
+    </div>
+</body>
+</html>
