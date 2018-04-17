@@ -12,7 +12,6 @@ def reset(request):
     return redirect(random_word)
 
 def random_word(request):
-    print get_random_string(length=14)
     if request.method == "POST":
         request.session['count'] += 1
         print get_random_string(length=14)
