@@ -9,8 +9,8 @@ class UserManager(models.Manager):
     def registration_validation(self, data):
         errors = []
         email_regex = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
-        alpha_only = re.compile(r'^[a-zA-Z ]+$')
-        email_length = re.compile(r'^([a-zA-Z0-9@*#]{8,15})$')
+        alpha_only = re.compile(r'^[a-zA-Z -]+$')
+        password_length = re.compile(r'^([a-zA-Z0-9@*#]{8,15})$')
         for fieldname, value in data.items():
             if len(value) < 1:
                 errors.append(fieldname + " cannot be empty!")
@@ -24,18 +24,23 @@ class UserManager(models.Manager):
             errors.append("Passwords must match!")
         if self.filter(email=data['email']).count() > 0:
             errors.append("E-Mail already registered!")
-        if re.match(email_length, data['password']) is None:
+        if re.match(password_length, data['password']) is None:
             errors.append("Password must be Letters, Numbers, Special Characacters(@ * #) and 8-15 characters long!")
         return errors
     def login_validation(self, data):
         errors = []
+        for fieldname, value in data.items():
+            if len(value) < 1:
+                errors.append(fieldname + " cannot be empty!")
+        if len(errors):
+            return errors
         if self.filter(email=data['email']).count() < 1:
             errors.append("E-Mail not registered!")
         else:
             trying = self.filter(email=data['email'])
             if not bcrypt.checkpw(data['password'].encode(), trying[0].password.encode()):
                 errors.append("Password not correct!")
-            return errors
+        return errors
         
 
 

@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.template import RequestContext
 from .models import Users
+import bcrypt
 
 
 def index(request):
@@ -31,16 +32,22 @@ def register(request):
             messages.error(request, error)
         return redirect('/')
     hashed_pw = bcrypt.hashpw(request.POST.get("password").encode(), bcrypt.gensalt())
-
     Users.objects.create(first_name=request.POST.get('first_name', None), last_name=request.POST.get('last_name', None), email=request.POST.get('email', None), password=hashed_pw)
+    logged_in = Users.objects.filter(email=request.POST['email'])
+    request.session['login'] = logged_in[0].id
+    request.session['name'] = "{} {}".format(logged_in[0].first_name, logged_in[0].last_name)
     return redirect('/')
 
 def logout(request):
+    request.session['login'] = "bad"
+    request.session['name'] = "bad"
     del request.session['login']
     del request.session['name']
     return redirect('/')
 
 def success(request):
+    if 'login' not in request.session:
+        return redirect('/')
     return render(request, 'login_and_registration/success.html')
 
 
