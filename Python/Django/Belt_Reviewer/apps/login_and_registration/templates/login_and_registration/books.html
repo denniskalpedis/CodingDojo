@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'login_and_registration/style.css' %}">
+    <title>Books Home</title>
+</head>
+<body>
+    
+    
+    <div id="wrapper">
+        <div id="header">
+            <div id="top_left">Logged in at {{request.session.name}}!</div>
+            <div id="top_right"><a href="/add">Add Book and Review</a><a href="/logout">Log out</a></div>
+        </div>
+        <div id="body">
+            <div id="body_left">
+                Recent Book Reviews:
+                {% for book in books %}
+                    <div class="book_review">
+                        <a href='books/{{book.id}}'>{{book.title}}</a>
+                        Rating: 
+                        {{book.user.first_name}} says: {{book.review.last()}}
+                    </div>
+
+            </div>
+            <div id="body_right">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

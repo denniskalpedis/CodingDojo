@@ -1,0 +1,20 @@
+* {
+    outline: 1px solid red;
+}
+
+#top_left { 
+    padding-left: 50px;
+    text-align: left;
+    width: 45%;
+    display: inline-block;
+}
+
+#top_right {
+    text-align: right;
+    width: 45%;
+    display: inline-block;
+}
+
+#top_right a {
+    margin-left: 20px;
+}
