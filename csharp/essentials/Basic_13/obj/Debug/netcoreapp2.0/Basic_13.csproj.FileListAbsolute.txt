@@ -1,0 +1,10 @@
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Basic_13/bin/Debug/netcoreapp2.0/Basic_13.deps.json
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Basic_13/bin/Debug/netcoreapp2.0/Basic_13.runtimeconfig.json
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Basic_13/bin/Debug/netcoreapp2.0/Basic_13.runtimeconfig.dev.json
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Basic_13/bin/Debug/netcoreapp2.0/Basic_13.dll
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Basic_13/bin/Debug/netcoreapp2.0/Basic_13.pdb
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Basic_13/obj/Debug/netcoreapp2.0/Basic_13.csproj.CoreCompileInputs.cache
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Basic_13/obj/Debug/netcoreapp2.0/Basic_13.AssemblyInfoInputs.cache
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Basic_13/obj/Debug/netcoreapp2.0/Basic_13.AssemblyInfo.cs
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Basic_13/obj/Debug/netcoreapp2.0/Basic_13.dll
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Basic_13/obj/Debug/netcoreapp2.0/Basic_13.pdb

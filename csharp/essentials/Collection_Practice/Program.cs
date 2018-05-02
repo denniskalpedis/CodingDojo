@@ -45,10 +45,11 @@ namespace Collection_Practice
             foreach(string key in keys)
             {
                 people[key] = flavors[rand.Next(0,flavors.Count)];
+                System.Console.WriteLine(people[key]);
             }
-            foreach(var entry in people)
+            foreach(var person in people)
             {
-                System.Console.WriteLine(entry.Key + " - " + entry.Value);
+                System.Console.WriteLine(person.Key + " - " + person.Value);
             }
         }
     }
