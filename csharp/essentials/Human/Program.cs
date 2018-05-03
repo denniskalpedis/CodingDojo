@@ -89,6 +89,12 @@ namespace Human
             System.Console.WriteLine(warrior.intelligence);
             System.Console.WriteLine(warrior.dexterity);
             System.Console.WriteLine(warrior.health);
+            Wizard harry = new Wizard("Potter");
+            System.Console.WriteLine(harry.name);
+            System.Console.WriteLine(harry.strength);
+            System.Console.WriteLine(harry.intelligence);
+            System.Console.WriteLine(harry.dexterity);
+            System.Console.WriteLine(harry.health);
         }
     }
 }
