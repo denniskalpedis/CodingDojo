@@ -1,0 +1,10 @@
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Time_Display/obj/Debug/netcoreapp2.0/Time_Display.csproj.CoreCompileInputs.cache
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Time_Display/obj/Debug/netcoreapp2.0/Time_Display.AssemblyInfoInputs.cache
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Time_Display/obj/Debug/netcoreapp2.0/Time_Display.AssemblyInfo.cs
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Time_Display/bin/Debug/netcoreapp2.0/Time_Display.deps.json
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Time_Display/bin/Debug/netcoreapp2.0/Time_Display.runtimeconfig.json
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Time_Display/bin/Debug/netcoreapp2.0/Time_Display.runtimeconfig.dev.json
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Time_Display/bin/Debug/netcoreapp2.0/Time_Display.dll
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Time_Display/bin/Debug/netcoreapp2.0/Time_Display.pdb
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Time_Display/obj/Debug/netcoreapp2.0/Time_Display.dll
+/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Time_Display/obj/Debug/netcoreapp2.0/Time_Display.pdb
