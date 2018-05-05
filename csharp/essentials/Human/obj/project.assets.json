@@ -664,23 +664,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/tazgodx/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Tazgo\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Human/Human.csproj",
+      "projectUniqueName": "c:\\Users\\Tazgo\\Desktop\\CodingDojo\\csharp\\essentials\\Human\\Human.csproj",
       "projectName": "Human",
-      "projectPath": "/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Human/Human.csproj",
-      "packagesPath": "/Users/tazgodx/.nuget/packages/",
-      "outputPath": "/Users/tazgodx/Documents/Coding_Dojo/csharp/essentials/Human/obj/",
+      "projectPath": "c:\\Users\\Tazgo\\Desktop\\CodingDojo\\csharp\\essentials\\Human\\Human.csproj",
+      "packagesPath": "C:\\Users\\Tazgo\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Tazgo\\Desktop\\CodingDojo\\csharp\\essentials\\Human\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/tazgodx/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Tazgo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
