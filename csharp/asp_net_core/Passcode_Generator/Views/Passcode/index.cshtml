@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="~/css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/scripts/script.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="~/css/style.css"/>
     <title>Random Passcode</title>
 </head>
 <body>
     <div class="row align-items-center justify-content-center p-4">
         <div class="w-40 text-center border border-dark col-4 p-4">
-            <form action="">
-                <p>Random Passcode (Passcode #@ViewBag.count)</p>
-                <div class="row align-items-center justify-content-center">
-                    <p id="Random" class="border border-dark p-2">@ViewBag.passcode</p>
-                </div>
-                <input type="submit" class="btn btn-light" value="Generate">
-            </form>
+            <p>Random Passcode (Passcode #<span id="count">@ViewBag.count</span>)</p>
+            <div class="row align-items-center justify-content-center">
+                <p id="random" class="border border-dark p-2">@ViewBag.passcode</p>
+            </div>
+            <button type="button" id="generate" class="btn btn-light">Generate</button>
+            <button type="button" id="reset" class="btn btn-danger" disabled>Reset</button>
         </div>
     </div>
 </body>
