@@ -11,7 +11,6 @@ $(document).ready(function(){
                 $('.button').toggleClass("d-none");
                 $('#dojoachi-alive').toggleClass("d-none");
                 $('#dojoachi-lose').toggleClass("d-none");
-                // $('#dojoachi').attr("src", "~/img/dead.jpg");
             }else if (response.message == "win"){
                 $('#fullness').text(response.fullness);
                 $('#happiness').text(response.happiness);
@@ -21,7 +20,6 @@ $(document).ready(function(){
                 $('.button').toggleClass("d-none");
                 $('#dojoachi-alive').toggleClass("d-none");
                 $('#dojoachi-win').toggleClass("d-none");
-                // $('#dojoachi').attr("src", "~/img/win.jpg");
             }else {
                 $('#fullness').text(response.fullness);
                 $('#happiness').text(response.happiness);
