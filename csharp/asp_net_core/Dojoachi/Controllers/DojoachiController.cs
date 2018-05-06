@@ -9,6 +9,7 @@ namespace Dojoachi.Controllers
         Random rand = new Random();
         // Dojoachi.Program.Pet pet = new Dojoachi.Program.Pet();
         string message = "Started a new Dojoachi";
+        string image = "happy";
         [HttpGet]
         [Route("")]
         public IActionResult Index()
@@ -58,9 +59,11 @@ namespace Dojoachi.Controllers
                     meals -= 1;
                     HttpContext.Session.SetInt32("meals", (int)meals);
                     message = "Your Dojoachi did not like that! Meals -1";
+                    image = "angry";
                 }
                 else
                 {
+                    image = "happy";
                     meals -= 1;
                     fullness +=temp;
                     HttpContext.Session.SetInt32("meals", (int)meals);
@@ -88,7 +91,8 @@ namespace Dojoachi.Controllers
                              happiness = HttpContext.Session.GetInt32("happiness"),
                              meals = HttpContext.Session.GetInt32("meals"),
                              energy = HttpContext.Session.GetInt32("energy"),
-                             message = message
+                             message = message,
+                             image = image
                          };
                 return Json(AnonObject);
             }
@@ -110,12 +114,14 @@ namespace Dojoachi.Controllers
                 int unhappy = rand.Next(1,5);
                 if (unhappy == 1)
                 {
+                    image = "angry";
                     energy -= 5;
                     HttpContext.Session.SetInt32("energy", (int)energy);
                     message = "Your Dojoachi did not have fun! Energy -5";
                 }
                 else
                 {
+                    image = "happy";
                     energy -= 5;
                     happiness += temp;
                     HttpContext.Session.SetInt32("energy", (int)energy);
@@ -145,7 +151,8 @@ namespace Dojoachi.Controllers
                              happiness = HttpContext.Session.GetInt32("happiness"),
                              meals = HttpContext.Session.GetInt32("meals"),
                              energy = HttpContext.Session.GetInt32("energy"),
-                             message = message
+                             message = message,
+                             image = image
                          };
                 return Json(AnonObject);
             }
@@ -154,6 +161,7 @@ namespace Dojoachi.Controllers
         [Route("/work")]
         public JsonResult Work()
         {
+            image = "happy";
             int? energy = HttpContext.Session.GetInt32("energy");
             int? meals = HttpContext.Session.GetInt32("meals");
             if (energy > 4)
@@ -171,7 +179,8 @@ namespace Dojoachi.Controllers
                          happiness = HttpContext.Session.GetInt32("happiness"),
                          meals = HttpContext.Session.GetInt32("meals"),
                          energy = HttpContext.Session.GetInt32("energy"),
-                         message = message
+                         message = message,
+                         image = image
                      };
             return Json(AnonObject);
         }
@@ -179,6 +188,7 @@ namespace Dojoachi.Controllers
         [Route("/sleep")]
         public JsonResult Sleep()
         {
+            image = "happy";
             int? energy = HttpContext.Session.GetInt32("energy");
             int? fullness = HttpContext.Session.GetInt32("fullness");
             int? happiness = HttpContext.Session.GetInt32("happiness");
@@ -227,7 +237,8 @@ namespace Dojoachi.Controllers
                             happiness = HttpContext.Session.GetInt32("happiness"),
                             meals = HttpContext.Session.GetInt32("meals"),
                             energy = HttpContext.Session.GetInt32("energy"),
-                            message = message
+                            message = message,
+                            image = image
                         };
                 return Json(AnonObject);
             }
