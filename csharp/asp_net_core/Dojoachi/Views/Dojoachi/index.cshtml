@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/scripts/script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css"/>
+    <title>Dojoachi</title>
+</head>
+<body>
+    <div class="w-50 align-items-center p-4 mx-auto">
+        <div class="row">
+            <div class="col">Fullness: <span id="fullness">@ViewBag.fullness</span></div>
+            <div class="col">Happiness: <span id="happiness">@ViewBag.happiness</span></div>
+            <div class="col">Meals: <span id="meals">@ViewBag.meals</span></div>
+            <div class="col">Energy: <span id="energy">@ViewBag.energy</span></div>
+        </div>
+        <div class="row align-items-center justify-content-center p-4" id="picture">
+            <img src="~/img/dead.jpg" alt="" class="mh-80 d-none picture" id="dojoachi-lose">
+            <img src="~/img/win.jpg" alt="" class="mh-80 d-none picture" id="dojoachi-win">
+            <img src="~/img/alive.png" alt="" class="mh-80 picture" id="dojoachi-alive"><br> <br>
+        </div>
+        <div class="row align-items-center justify-content-center p-1">
+            <p class="d-block" id="status">@ViewBag.message</p>
+        </div>
+        <div class="row align-items-center justify-content-center p-1" id="actions">
+            <div class="col"></div>
+            <div class="col button text-center"><button class="mx-auto" id="feed">Feed</button></div>
+            <div class="col button text-center"><button class="mx-auto" id="play">Play</button></div>
+            <div class="col button text-center"><button class="mx-auto" id="work">Work</button></div>
+            <div class="col button text-center"><button class="mx-auto" id="sleep">Sleep</button></div>
+            <div class="col d-none button text-center"><a href="/"><button class="mx-auto" id="reset">Reset</button></a></div>
+            <div class="col"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Dojoachi\bin\Debug\netcoreapp2.0\Dojoachi.deps.json
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Dojoachi\bin\Debug\netcoreapp2.0\Dojoachi.runtimeconfig.json
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Dojoachi\bin\Debug\netcoreapp2.0\Dojoachi.runtimeconfig.dev.json
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Dojoachi\bin\Debug\netcoreapp2.0\Dojoachi.dll
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Dojoachi\bin\Debug\netcoreapp2.0\Dojoachi.pdb
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Dojoachi\obj\Debug\netcoreapp2.0\Dojoachi.csproj.CoreCompileInputs.cache
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Dojoachi\obj\Debug\netcoreapp2.0\Dojoachi.AssemblyInfoInputs.cache
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Dojoachi\obj\Debug\netcoreapp2.0\Dojoachi.AssemblyInfo.cs
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Dojoachi\obj\Debug\netcoreapp2.0\Dojoachi.dll
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Dojoachi\obj\Debug\netcoreapp2.0\Dojoachi.pdb
