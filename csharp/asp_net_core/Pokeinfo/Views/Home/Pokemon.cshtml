@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="@ViewBag.pokemon.image" alt="pokemon">
+    <h1>@ViewBag.pokemon.name</h1> 
+    <h2>Types</h2>
+    <ul>
+    @foreach(string type in @ViewBag.pokemon.ptypes)
+    {
+        <li>@type</li>
+    }
+    </ul>
+    <h2>Height: @ViewBag.pokemon.height</h2>
+    <h2>Weight: @ViewBag.pokemon.weight</h2>
+    
+
+</body>
+</html>

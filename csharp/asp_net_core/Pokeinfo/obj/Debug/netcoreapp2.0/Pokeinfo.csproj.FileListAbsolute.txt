@@ -1,0 +1,10 @@
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Pokeinfo\obj\Debug\netcoreapp2.0\Pokeinfo.csproj.CoreCompileInputs.cache
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Pokeinfo\obj\Debug\netcoreapp2.0\Pokeinfo.AssemblyInfoInputs.cache
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Pokeinfo\obj\Debug\netcoreapp2.0\Pokeinfo.AssemblyInfo.cs
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Pokeinfo\bin\Debug\netcoreapp2.0\Pokeinfo.deps.json
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Pokeinfo\bin\Debug\netcoreapp2.0\Pokeinfo.runtimeconfig.json
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Pokeinfo\bin\Debug\netcoreapp2.0\Pokeinfo.runtimeconfig.dev.json
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Pokeinfo\bin\Debug\netcoreapp2.0\Pokeinfo.dll
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Pokeinfo\bin\Debug\netcoreapp2.0\Pokeinfo.pdb
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Pokeinfo\obj\Debug\netcoreapp2.0\Pokeinfo.dll
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\Pokeinfo\obj\Debug\netcoreapp2.0\Pokeinfo.pdb
