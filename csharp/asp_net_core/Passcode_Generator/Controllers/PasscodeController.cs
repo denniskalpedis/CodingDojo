@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
  
-namespace Passcode.Controllers
+namespace Passcode_Generator.Controllers
 {
     public class PasscodeController : Controller
     {

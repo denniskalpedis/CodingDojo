@@ -1,0 +1,23 @@
+@model Login_and_Registration.Models.User
+
+<h1>Login and Registration</h1>
+<form asp-controller="Login_and_Registration" asp-action="Register" method="post">
+    <span asp-validation-for="firstname" class="text-danger d-block"></span>
+    <label asp-for="firstname"></label>
+    <input asp-for="firstname"/><br>
+    <span asp-validation-for="lastname" class="text-danger d-block"></span>
+    <label asp-for="lastname"></label>
+    <input asp-for="lastname"/><br>
+    <span asp-validation-for="email" class="text-danger d-block"></span>
+    <label asp-for="email"></label>
+    <input asp-for="email"/><br>
+    <span asp-validation-for="password" class="text-danger d-block"></span>
+    <label asp-for="password"></label>
+    <input asp-for="password"/><br>
+    <span asp-validation-for="confirmpassword" class="text-danger d-block"></span>
+    <label asp-for="confirmpassword"></label>
+    <input asp-for="confirmpassword"/><br>
+    <button type="submit">Create new User</button>
+</form>
+
+<a href="Login"><button>Login!</button></a>
