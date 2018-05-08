@@ -12534,23 +12534,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tazgo\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/tazgodx/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tazgo\\Desktop\\CodingDojo\\csharp\\asp_net_core\\Dojoachi\\Dojoachi.csproj",
+      "projectUniqueName": "/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/Dojoachi/Dojoachi.csproj",
       "projectName": "Dojoachi",
-      "projectPath": "C:\\Users\\Tazgo\\Desktop\\CodingDojo\\csharp\\asp_net_core\\Dojoachi\\Dojoachi.csproj",
-      "packagesPath": "C:\\Users\\Tazgo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tazgo\\Desktop\\CodingDojo\\csharp\\asp_net_core\\Dojoachi\\obj\\",
+      "projectPath": "/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/Dojoachi/Dojoachi.csproj",
+      "packagesPath": "/Users/tazgodx/.nuget/packages/",
+      "outputPath": "/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/Dojoachi/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Tazgo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/tazgodx/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
