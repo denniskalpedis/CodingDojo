@@ -1,0 +1,10 @@
+/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/Thewall/bin/Debug/netcoreapp2.0/Thewall.deps.json
+/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/Thewall/bin/Debug/netcoreapp2.0/Thewall.runtimeconfig.json
+/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/Thewall/bin/Debug/netcoreapp2.0/Thewall.runtimeconfig.dev.json
+/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/Thewall/bin/Debug/netcoreapp2.0/Thewall.dll
+/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/Thewall/bin/Debug/netcoreapp2.0/Thewall.pdb
+/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/Thewall/obj/Debug/netcoreapp2.0/Thewall.csproj.CoreCompileInputs.cache
+/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/Thewall/obj/Debug/netcoreapp2.0/Thewall.AssemblyInfoInputs.cache
+/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/Thewall/obj/Debug/netcoreapp2.0/Thewall.AssemblyInfo.cs
+/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/Thewall/obj/Debug/netcoreapp2.0/Thewall.dll
+/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/Thewall/obj/Debug/netcoreapp2.0/Thewall.pdb

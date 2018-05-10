@@ -1,0 +1,12 @@
+.center {
+    line-height: 100%;
+    height: 100%;
+    white-space: nowrap;
+}
+textarea {
+    width: 100%;
+}
+body {
+    width: 85%;
+    margin: auto;
+}
