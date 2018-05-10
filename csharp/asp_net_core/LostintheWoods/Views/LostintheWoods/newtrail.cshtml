@@ -1,0 +1,57 @@
+<div class="w-50 mx-auto">
+    <div class="border-bottom d-flex align-items-center">
+        <div class="col text-left"><span><h2>Add A New Trail</h2></span></div><div class="col text-right"><span><a href="logout">Go Home</a></span></div>
+    </div>
+    @model LostintheWoods.Models.Trails
+    <form asp-controller="Trails" asp-action="Register" method="post">
+        
+        
+            <div class="row m-1"><span asp-validation-for="Name" class="text-danger d-block mx-auto"></span></div>
+            <div class="row m-1">
+                <div class="col text-right"><label asp-for="Name"></label></div>
+                <div class="col"><input asp-for="Name"/><br></div>
+            </div>
+        
+        
+        
+            <div class="row m-1"><span asp-validation-for="Description" class="text-danger d-block mx-auto"></span></div>
+            <div class="row m-1">
+                <div class="col text-right"><label asp-for="Description"></label></div>
+                <div class="col"><textarea asp-for="Description"></textarea><br></div>
+            </div>
+        
+        
+        
+            <div class="row m-1"><span asp-validation-for="Length" class="text-danger d-block mx-auto"></span></div>
+            <div class="row m-1">
+                <div class="col text-right"><label asp-for="Length"></label></div>
+                <div class="col"><input asp-for="Length"/><br></div>
+            </div>
+        
+        
+        
+            <div class="row m-1"><span asp-validation-for="Elevation" class="text-danger d-block mx-auto"></span></div>
+            <div class="row m-1">
+                <div class="col text-right"><label asp-for="Elevation"></label></div>
+                <div class="col"><input asp-for="Elevation"/><br></div>
+            </div>
+        
+        
+        
+            <div class="row m-1"><span asp-validation-for="Latitude" class="text-danger d-block mx-auto"></span></div>
+            <div class="row m-1">
+                <div class="col text-right"><label asp-for="Latitude"></label></div>
+                <div class="col"><input asp-for="Latitude"/><br></div>
+            </div>
+        
+        
+        
+            <div class="row m-1"><span asp-validation-for="Longitude" class="text-danger d-block mx-auto"></span></div>
+            <div class="row m-1">
+                <div class="col text-right"><label asp-for="Longitude"></label></div>
+                <div class="col"><input asp-for="Longitude"/><br></div>
+            </div>
+        
+        <div class="row float-right"><button type="submit">Create new Trail</button></div>
+    </form>
+</div>
