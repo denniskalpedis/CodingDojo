@@ -1,1 +1,33 @@
-<h1>LostintheWoods</h1> <h4>List of local hiking trails</h4>
+<h4>List of local hiking trails</h4>
+<div class="">
+    
+
+    @if (ViewBag.Trails != null)
+    {
+        <table class="table table-bordered table-hover">
+            <div class="row">
+                <thead>
+                    <tr>
+                        <div class="col"><th>Trail Name</th></div>
+                        <div class="col"><th>Trail Length</th></div>
+                        <div class="col"><th>Elevation Change</th></div>
+                    </tr>
+                </thead>
+            </div>
+            
+                
+                    @foreach (var trail in ViewBag.Trails)
+                    {
+                        <div class="row"><tr>
+                        <div class="col"><td><a href="trail/@trail.Id">@trail.Name</a></td></div>
+                        <div class="col"><td>@trail.Length Miles</td></div>
+                        <div class="col"><td>@trail.Elevation Feet</td></div>
+                        </tr></div>
+                    }
+                
+            
+        </table><br>
+        
+    }
+    <div class="float-right"><a href="/newtrail"><button>Add a new Trail</button></a></div>
+</div>

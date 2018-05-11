@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LostintheWoods.Models{
 	public class Trails:BaseEntity{
+		public int Id {get; set;}
 		[Required]
 		[MinLength(2)]
 		public string Name {get; set;}
@@ -11,16 +12,16 @@ namespace LostintheWoods.Models{
 		public string Description {get; set;}
 		[Required]
 		[RegularExpression("([0-9]+)", ErrorMessage = "Please enter valid Number")]
-		public double Length {get; set;}
+		public int? Length {get; set;}
 		[Required]
-		[RegularExpression("([0-9]+)", ErrorMessage = "Please enter valid Number")]
-		public double Elevation {get; set;}
+		[RegularExpression("(-?[0-9]+)", ErrorMessage = "Please enter valid Number")]
+		public int? Elevation {get; set;}
 		[Required]
 		[RegularExpression(@"^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,8})?))$", ErrorMessage = "Please enter valid Number")]
-		public double Latitude {get; set;}
+		public double? Latitude {get; set;}
 		[Required]
 		[RegularExpression(@"^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,8})?))$", ErrorMessage = "Please enter valid Number")]
-		public double Longitude {get; set;}
+		public double? Longitude {get; set;}
 
 /*
 	Useful Annotations and Examples:
