@@ -9,3 +9,14 @@
 /Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.AssemblyInfo.cs
 /Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.dll
 /Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.pdb
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\DojoLeague\bin\Debug\netcoreapp2.0\DojoLeague.deps.json
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\DojoLeague\bin\Debug\netcoreapp2.0\DojoLeague.runtimeconfig.json
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\DojoLeague\bin\Debug\netcoreapp2.0\DojoLeague.runtimeconfig.dev.json
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\DojoLeague\bin\Debug\netcoreapp2.0\DojoLeague.dll
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\DojoLeague\bin\Debug\netcoreapp2.0\DojoLeague.pdb
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\DojoLeague\obj\Debug\netcoreapp2.0\DojoLeague.csprojResolveAssemblyReference.cache
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\DojoLeague\obj\Debug\netcoreapp2.0\DojoLeague.csproj.CoreCompileInputs.cache
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\DojoLeague\obj\Debug\netcoreapp2.0\DojoLeague.AssemblyInfoInputs.cache
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\DojoLeague\obj\Debug\netcoreapp2.0\DojoLeague.AssemblyInfo.cs
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\DojoLeague\obj\Debug\netcoreapp2.0\DojoLeague.dll
+C:\Users\Tazgo\Desktop\CodingDojo\csharp\asp_net_core\DojoLeague\obj\Debug\netcoreapp2.0\DojoLeague.pdb
