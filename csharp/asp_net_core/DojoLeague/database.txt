@@ -1,0 +1,56 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema DojoLeague
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema DojoLeague
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `DojoLeague` DEFAULT CHARACTER SET utf8 ;
+USE `DojoLeague` ;
+
+-- -----------------------------------------------------
+-- Table `DojoLeague`.`Dojo`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `DojoLeague`.`Dojo` (
+  `Id` INT(11) NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(255) NULL DEFAULT NULL,
+  `Location` VARCHAR(255) NULL DEFAULT NULL,
+  `Information` VARCHAR(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `DojoLeague`.`Ninja`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `DojoLeague`.`Ninja` (
+  `Id` INT(11) NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(255) NULL DEFAULT NULL,
+  `Level` INT(11) NULL DEFAULT NULL,
+  `Description` VARCHAR(255) NULL DEFAULT NULL,
+  `Dojo_Id` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_Ninja_Dojo_idx` (`Dojo_Id` ASC),
+  CONSTRAINT `fk_Ninja_Dojo`
+    FOREIGN KEY (`Dojo_Id`)
+    REFERENCES `DojoLeague`.`Dojo` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 2
+DEFAULT CHARACTER SET = utf8;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
