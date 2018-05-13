@@ -1,0 +1,23 @@
+@model DojoLeague.Models.Ninja
+<form asp-controller="Ninja" asp-action="Ninjas" method="post">
+
+    <div class="row m-1"><span asp-validation-for="Name" class="text-danger d-block mx-auto"></span></div>
+    <div class="row m-1">
+        <div class="col text-right"><label asp-for="Name"></label></div>
+        <div class="col"><input asp-for="Name"/><br></div>
+    </div>
+
+    <div class="row m-1"><span asp-validation-for="Description" class="text-danger d-block mx-auto"></span></div>
+    <div class="row m-1">
+        <div class="col text-right"><label asp-for="Description"></label></div>
+        <div class="col"><textarea asp-for="Description"></textarea><br></div>
+    </div>
+
+    <div class="row m-1"><span asp-validation-for="Level" class="text-danger d-block mx-auto"></span></div>
+    <div class="row m-1">
+        <div class="col text-right"><label asp-for="Level"></label></div>
+        <div class="col"><input asp-for="Level"/><br></div>
+    </div>
+
+    <div class="row float-right"><button type="submit">Add</button></div>
+</form>
