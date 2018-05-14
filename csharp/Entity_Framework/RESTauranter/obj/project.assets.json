@@ -12827,11 +12827,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/DojoLeague/DojoLeague.csproj",
-      "projectName": "DojoLeague",
-      "projectPath": "/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/DojoLeague/DojoLeague.csproj",
+      "projectUniqueName": "/Users/tazgodx/Documents/Coding_Dojo/csharp/Entity_Framework/RESTauranter/RESTauranter.csproj",
+      "projectName": "RESTauranter",
+      "projectPath": "/Users/tazgodx/Documents/Coding_Dojo/csharp/Entity_Framework/RESTauranter/RESTauranter.csproj",
       "packagesPath": "/Users/tazgodx/.nuget/packages/",
-      "outputPath": "/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/DojoLeague/obj/",
+      "outputPath": "/Users/tazgodx/Documents/Coding_Dojo/csharp/Entity_Framework/RESTauranter/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
