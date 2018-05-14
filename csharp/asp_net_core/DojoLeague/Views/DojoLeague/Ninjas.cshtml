@@ -1,23 +1,78 @@
-@model DojoLeague.Models.Ninja
-<form asp-controller="Ninja" asp-action="Ninjas" method="post">
-
-    <div class="row m-1"><span asp-validation-for="Name" class="text-danger d-block mx-auto"></span></div>
-    <div class="row m-1">
-        <div class="col text-right"><label asp-for="Name"></label></div>
-        <div class="col"><input asp-for="Name"/><br></div>
+<div class="row">
+    <div class="col border-right w-50">
+        <h2>Registered Ninjas</h2>
+        @if (ViewBag.ninjas != null)
+        {
+            <table class="table table-bordered table-hover">
+            <div class="row">
+                <thead>
+                    <tr>
+                        <div class="col"><th>Ninja Name</th></div>
+                        <div class="col"><th>Home Dojo</th></div>
+                    </tr>
+                </thead>
+            </div>
+            @foreach(var ninja in ViewBag.ninjas){
+                <div class="row">
+                    <tr>
+                    <div class="col"><td><a href="ninja/@ninja.Id">@ninja.Name</a></td></div>
+                    @if (ninja.dojo.Id != 1) {
+                        <div class="col"><td><a href="Dojo/@ninja.dojo.Id">@ninja.dojo.Name</a></td></div>
+                    } else {
+                        <div class="col"><td>@ninja.dojo.Name</td></div>
+                    }
+                    </tr>
+                </div>
+            }
+            </table>
+        }
     </div>
-
-    <div class="row m-1"><span asp-validation-for="Description" class="text-danger d-block mx-auto"></span></div>
-    <div class="row m-1">
-        <div class="col text-right"><label asp-for="Description"></label></div>
-        <div class="col"><textarea asp-for="Description"></textarea><br></div>
+    <div class="col w-50">
+        <h2>Register A Ninja</h2>
+        @model DojoLeague.Models.Ninja
+        <form class="mt-5" asp-controller="Ninja" asp-action="Ninjas" method="post">
+        
+            <div class="row m-1"><span asp-validation-for="Name" class="text-danger d-block mx-auto"></span></div>
+            <div class="row m-1">
+                <div class="col text-right w-50"><label asp-for="Name"></label></div>
+                <div class="col w-50"><input asp-for="Name"/><br></div>
+            </div>
+        
+            <div class="row m-1"><span asp-validation-for="Description" class="text-danger d-block mx-auto"></span></div>
+            <div class="row m-1">
+                <div class="col text-right w-50"><label asp-for="Description"></label></div>
+                <div class="col w-50"><textarea asp-for="Description"></textarea><br></div>
+            </div>
+        
+            <div class="row m-1">
+                <div class="col"><span asp-validation-for="Level" class="text-danger d-block mx-auto"></span></div>
+                <div class="w-100"></div>
+                <div class="col text-right w-50"><label asp-for="Level"></label></div>
+                <div class="col w-50"><input asp-for="Level"/><br></div>
+            </div>
+            <div class="row m-1">
+                <span asp-validation-for="dojo" class="text-danger d-block mx-auto"></span>
+            </div>
+            <div class="row m-1">
+                <div class="col text-right"><label asp-for="dojo"></label></div>
+                <div class="col">
+                    <select type="number" id="Dojo_Id" name="Dojo_Id">
+                        @foreach (var dojo in ViewBag.dojos)
+                        {
+                            <option value=@dojo.Id>@dojo.Name</option>
+                        }   
+                    </select>
+                </div>
+            </div>
+            <!-- <div class="row m-1">
+                <span asp-validation-for="dojo" class="text-danger d-block mx-auto"></span>
+            </div>
+            <div class="row m-1">
+                <select asp-for="dojo" 
+                        asp-items="ViewBag.dojos.Name">
+                </select>
+            </div> -->
+            <div class="row float-right"><button type="submit">Add</button></div>
+        </form>
     </div>
-
-    <div class="row m-1"><span asp-validation-for="Level" class="text-danger d-block mx-auto"></span></div>
-    <div class="row m-1">
-        <div class="col text-right"><label asp-for="Level"></label></div>
-        <div class="col"><input asp-for="Level"/><br></div>
-    </div>
-
-    <div class="row float-right"><button type="submit">Add</button></div>
-</form>
+</div>

@@ -1,0 +1,52 @@
+<h2>@ViewBag.dojo.Name Dojo!!</h2> <br>
+<p>Dojo Location - @ViewBag.dojo.Location</p>
+<p>Information - @ViewBag.dojo.Information</p>
+
+<div class="row">
+    <div class="col">
+        @if (@ViewBag.dojo.Ninjas.Count > 0){
+            <h2>Current Members</h2>
+            <table class="table table-bordered table-hover">
+                <div class="row">
+                    <thead>
+                        <tr>
+                            <div class="col"><th>Ninja</th></div>
+                            <div class="col"><th>Action</th></div>
+                        </tr>
+                    </thead>
+                </div>
+            @foreach (var ninja in @ViewBag.dojo.Ninjas) {
+                <div class="row">
+                    <tr>
+                    <div class="col"><td><a href="/ninja/@ninja.Id">@ninja.Name</a></td></div>
+                    <div class="col"><td><a href="/banish/@ninja.Id/@ViewBag.dojo.Id">Banish!</a></td></div>
+                    </tr>
+                </div>
+            }
+            </table>
+        }
+    </div>
+    <div class="col">
+        @if (@ViewBag.rogue.Count > 0){
+            <h2>Rogue Ninjas</h2>
+            <table class="table table-bordered table-hover">
+                <div class="row">
+                    <thead>
+                        <tr>
+                            <div class="col"><th>Ninja</th></div>
+                            <div class="col"><th>Action</th></div>
+                        </tr>
+                    </thead>
+                </div>
+            @foreach (var ninja in @ViewBag.rogue) {
+                <div class="row">
+                    <tr>
+                    <div class="col"><td><a href="/ninja/@ninja.Id">@ninja.Name</a></td></div>
+                    <div class="col"><td><a href="/dojo/@ViewBag.dojo.Id/recruit/@ninja.Id">Recruit!</a></td></div>
+                    </tr>
+                </div>
+            }
+            </table>
+        }
+    </div>
+</div>

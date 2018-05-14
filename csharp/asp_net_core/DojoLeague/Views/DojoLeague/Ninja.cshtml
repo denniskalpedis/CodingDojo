@@ -1,0 +1,8 @@
+<h2>Name: @ViewBag.ninja.Name</h2>
+<p>Ninja Level - @ViewBag.ninja.Level</p>
+<p>Description: @ViewBag.ninja.Description</p>
+@if(@ViewBag.ninja.dojo.Id == 1){
+    <p>Current Dojo: @ViewBag.ninja.dojo.Name</p>
+} else {
+    <p>Current Dojo: <a href="/dojo/@ViewBag.ninja.dojo.Id">@ViewBag.ninja.dojo.Name</a></p>
+}

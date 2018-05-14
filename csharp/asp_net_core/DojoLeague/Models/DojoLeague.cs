@@ -10,8 +10,10 @@ namespace DojoLeague.Models{
 		public string Description {get; set;}
 		[Required] 
 		[Range(1, 10, ErrorMessage = "Value for {0} must be between {1} and {2}.")]
-		public int Level {get; set;}
-		public Dojo Dojo_Id {get; set;}
+		public int? Level {get; set;}
+		[Required]
+		public int? Dojo_Id {get; set;}
+		public Dojo dojo {get; set;}
 	}
 	public class Dojo:BaseEntity{
 		public int Id {get; set;}
@@ -26,6 +28,10 @@ namespace DojoLeague.Models{
 			Ninjas = new List<Ninja>();
 		}
 
+	}
+
+	public class DojoLeague:BaseEntity {
+		
 	}
 
 

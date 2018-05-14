@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-4 border-right">
+        <h2>All Dojos</h2>
+        @if (@ViewBag.dojos != null)
+        {
+            <table class="table table-bordered table-hover">
+            <div class="row">
+                <thead>
+                    <tr>
+                        <div class="col"><th>Dojo Name</th></div>
+                    </tr>
+                </thead>
+            </div>
+            @foreach (var dojo in @ViewBag.dojos)
+            {
+                <div class="row">
+                    <tr>
+                        @if (dojo.Id != 1)
+                        {
+                            <div class="col"><td><a href="Dojo/@dojo.Id">@dojo.Name</a></td></div>
+                        } 
+                        else 
+                        {
+                            <div class="col"><td>@dojo.Name</td></div>
+                        }
+                    </tr>
+                </div>
+            }
+            </table>
+        }
+    </div>
+    <div class="col-8">
+        @model DojoLeague.Models.Dojo
+        <h2>Register A Dojo</h2>
+        <form class="mt-5" asp-controller="Dojo" asp-action="Dojos" method="post">
+        
+            <div class="row m-1"><span asp-validation-for="Name" class="text-danger d-block mx-auto"></span></div>
+            <div class="row m-1">
+                <div class="col text-right w-50"><label asp-for="Name"></label></div>
+                <div class="col w-50"><input asp-for="Name"/><br></div>
+            </div>
+        
+            <div class="row m-1"><span asp-validation-for="Information" class="text-danger d-block mx-auto"></span></div>
+            <div class="row m-1">
+                <div class="col text-right w-50"><label asp-for="Information"></label></div>
+                <div class="col w-50"><textarea asp-for="Information"></textarea><br></div>
+            </div>
+        
+            <div class="row m-1">
+                <div class="col"><span asp-validation-for="Location" class="text-danger d-block mx-auto"></span></div>
+                <div class="w-100"></div>
+                <div class="col text-right w-50"><label asp-for="Location"></label></div>
+                <div class="col w-50"><input asp-for="Location"/><br></div>
+            </div>
+            <div class="row float-right"><button type="submit">Add</button></div>
+        </form>
+    </div>
+</div>
