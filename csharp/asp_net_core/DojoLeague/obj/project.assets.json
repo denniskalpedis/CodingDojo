@@ -12821,23 +12821,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/tazgodx/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Tazgo\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/DojoLeague/DojoLeague.csproj",
+      "projectUniqueName": "C:\\Users\\Tazgo\\Desktop\\CodingDojo\\csharp\\asp_net_core\\DojoLeague\\DojoLeague.csproj",
       "projectName": "DojoLeague",
-      "projectPath": "/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/DojoLeague/DojoLeague.csproj",
-      "packagesPath": "/Users/tazgodx/.nuget/packages/",
-      "outputPath": "/Users/tazgodx/Documents/Coding_Dojo/csharp/asp_net_core/DojoLeague/obj/",
+      "projectPath": "C:\\Users\\Tazgo\\Desktop\\CodingDojo\\csharp\\asp_net_core\\DojoLeague\\DojoLeague.csproj",
+      "packagesPath": "C:\\Users\\Tazgo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tazgo\\Desktop\\CodingDojo\\csharp\\asp_net_core\\DojoLeague\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/tazgodx/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Tazgo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
