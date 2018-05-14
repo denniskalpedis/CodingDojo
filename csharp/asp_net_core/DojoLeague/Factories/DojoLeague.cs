@@ -18,8 +18,7 @@ namespace DojoLeague.Factory{
                 var dojocount = dbConnection.QuerySingle<int>("SELECT COUNT(*) FROM Dojo");
                 if (dojocount == 0)
                 {
-                    string query =  "INSERT INTO Dojo (Name) VALUES (Rogue)";
-                    dbConnection.Open();
+                    string query =  "INSERT INTO Dojo (Name) VALUES ('Rogue')";
                     dbConnection.Execute(query);
                     System.Console.WriteLine("Empty Dojo List!");
                 }
