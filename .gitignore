@@ -3,6 +3,11 @@
 # or wget:
 # wget --no-check-certificate http://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
 
+# ASP.NET Core appsettings
+appsettings.json
+appsettings.production.json
+appsettings.development.json
+
 # User-specific files
 *.suo
 *.user
@@ -230,5 +235,3 @@ Thumbs.db
 Files that might appear on external disks
 .Spotlight-V100
 .Trashes
-
-appsettings.json
