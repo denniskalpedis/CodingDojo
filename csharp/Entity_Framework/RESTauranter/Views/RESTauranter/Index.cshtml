@@ -1,4 +1,38 @@
 <h1>Write a new Review:</h1>
+@model RESTauranter.Models.Reviews
 <div class="row">
-    <div></div>
+    <form asp-controller="RESTauranter" asp-action="addNew" method="post" class="mt-5">
+        
+            <div class="row m-1"><span asp-validation-for="user_name" class="text-danger text-center d-block mx-auto"></span></div>
+            <div class="row m-1">
+                <label asp-for="user_name" class="col text-right w-50"></label>
+                <input class="col w-50" asp-for="user_name"/><br>
+            </div>
+
+            <span asp-validation-for="restaurant_name" class="row m-1 text-danger text-center d-block mx-auto"></span>
+            <div class="row m-1">
+                <label class="col text-right w-50" asp-for="restaurant_name"></label>
+                <input class="col w-50" asp-for="restaurant_name"/><br>
+            </div>
+        
+            <span asp-validation-for="review" class="row m-1 text-danger text-center d-block mx-auto"></span>
+            <div class="row m-1">
+                <label asp-for="review" class="col text-right w-50"></label>
+                <textarea asp-for="review" class="col w-50"></textarea><br>
+            </div>
+        
+            <span asp-validation-for="date" class="row m-1 text-danger text-center d-block mx-auto"></span>
+            <div class="row m-1">
+                <label asp-for="date" class="col text-right w-50"></label>
+                <input asp-for="date" class="col w-50"><br>
+            </div>
+
+            <span asp-validation-for="stars" class="row m-1 text-danger text-center d-block mx-auto"></span>
+            <div class="row m-1">
+                <label asp-for="stars" class="col text-right w-50"></label>
+                <input asp-for="stars" class="col w-50"><br>
+            </div>
+
+            <div class="row float-right"><button type="submit">Add</button></div>
+        </form>
 </div>
