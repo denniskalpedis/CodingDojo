@@ -15,7 +15,7 @@ namespace WeddingPlanner.Controllers{
     		_context = context;
     	}
 
-[HttpGet]
+        [HttpGet]
         [Route("")]
         public IActionResult Index(){
             int? Id = HttpContext.Session.GetInt32("Id");
@@ -99,6 +99,7 @@ namespace WeddingPlanner.Controllers{
                 return RedirectToAction("Index");
             }
             ViewBag.weddings = _context.Wedding.Include( u => u.creator ).Include(u => u.attendees );
+            ViewBag.user = _context.Users.SingleOrDefault(u => u.id == HttpContext.Session.GetInt32("Id"));
             return View("Dashboard");
         }
 
