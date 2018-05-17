@@ -1,0 +1,34 @@
+<h1>Plan Your Wedding</h1>
+<p><a href="Dashboard">Dashboard</a>   <a href="logout">Log Out</a></p>
+
+@model WeddingPlanner.Models.WeddingViewModel
+<div class="row text-center">
+    <form asp-controller="WeddingPlanner" asp-action="SaveWedding" method="post" class="mt-5 mx-auto">
+        
+        <span asp-validation-for="wedderone" class="text-danger text-center d-block mx-auto row m-1"></span>
+        <div class="row m-1">
+            <label asp-for="wedderone" class="col text-right w-50"></label>
+            <input class="col w-50" asp-for="wedderone"/><br>
+        </div>
+
+        <span asp-validation-for="weddertwo" class="text-danger text-center d-block mx-auto row m-1"></span>
+        <div class="row m-1">
+            <label asp-for="weddertwo" class="col text-right w-50"></label>
+            <input class="col w-50" asp-for="weddertwo"/><br>
+        </div>
+
+        <span asp-validation-for="date" class="row m-1 text-danger text-center d-block mx-auto"></span>
+        <div class="row m-1">
+            <label class="col text-right w-50" asp-for="date"></label>
+            <input class="col w-50" asp-for="date"/><br>
+        </div>
+    
+        <span asp-validation-for="address" class="row m-1 text-danger text-center d-block mx-auto"></span>
+        <div class="row m-1">
+            <label asp-for="address" class="col text-right w-50"></label>
+            <input asp-for="address" class="col w-50"/><br>
+        </div>
+
+        <div class="row float-right"><button type="submit">Create</button></div>
+    </form>
+</div>

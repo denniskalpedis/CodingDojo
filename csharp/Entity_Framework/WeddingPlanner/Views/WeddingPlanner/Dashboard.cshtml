@@ -1,0 +1,7 @@
+<h1>Welcome to the Wedding Planner</h1>
+<p><a href="logout">Log Out</a></p>
+
+<a href="/AddWedding"><button>New Wedding</button></a>
+@foreach(var wedding in ViewBag.weddings){
+    <h2>@wedding.wedderone & @wedding.weddertwo</h2>
+}
