@@ -1,0 +1,18 @@
+<h1>@ViewBag.wedding.wedderone and @ViewBag.wedding.weddertwo's Wedding</h1>
+<p><a href="/Dashboard">Dashboard</a>   <a href="/logout">Log Out</a></p>
+
+<div class="row">
+    <div class="col">
+        Date: @ViewBag.wedding.date.ToString("MM/dd/yyyy") <br>
+        <br>
+        Guests: <br>
+        @if(ViewBag.wedding.attendees.Count > 0){
+            @foreach(var attendee in @ViewBag.wedding.attendees){
+                <p>@attendee.user.first_name @attendee.user.last_name</p>
+            }
+        }
+    </div>
+    <div class="col">
+        
+    </div>
+</div>

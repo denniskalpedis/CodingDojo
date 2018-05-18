@@ -98,7 +98,7 @@ namespace WeddingPlanner.Controllers{
             {
                 return RedirectToAction("Index");
             }
-            ViewBag.weddings = _context.Wedding.Include( u => u.creator ).Include(u => u.attendees );
+            ViewBag.weddings = _context.Wedding.Include( u => u.creator ).Include(u => u.attendees ).ThenInclude(u => u.user );
             ViewBag.user = _context.Users.SingleOrDefault(u => u.id == HttpContext.Session.GetInt32("Id"));
             return View("Dashboard");
         }
@@ -141,6 +141,64 @@ namespace WeddingPlanner.Controllers{
         public IActionResult Logout(){
             HttpContext.Session.Remove("Id");
             return RedirectToAction("Index");
+        }
+
+        [Route("RSVP/{id}")]
+        public IActionResult RSVP(int id){
+            int? Id = HttpContext.Session.GetInt32("Id");
+            if(Id == null)
+            {
+                return RedirectToAction("Index");
+            };
+            RSVP rsvp = new RSVP{
+                userid = Id,
+                weddingid = id
+            };
+            _context.RSVP.Add(rsvp);
+            _context.SaveChanges();
+            return RedirectToAction("Dashboard");
+        }
+
+        [Route("UNRSVP/{id}")]
+        public IActionResult UNRSVP(int id){
+            int? Id = HttpContext.Session.GetInt32("Id");
+            if(Id == null)
+            {
+                return RedirectToAction("Index");
+            }
+            var rsvp = _context.RSVP.SingleOrDefault(u => u.userid == Id && u.weddingid == id);
+            if(rsvp != null){
+                _context.RSVP.Remove(rsvp);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Dashboard");
+        }
+
+        [Route("delete/{id}")]
+        public IActionResult Delete(int id){
+            int? Id = HttpContext.Session.GetInt32("Id");
+            if(Id == null)
+            {
+                return RedirectToAction("Index");
+            }
+            var wedding = _context.Wedding.Include( u => u.creator ).Include(u => u.attendees ).ThenInclude(u => u.user ).SingleOrDefault(u => u.id == id);
+            if(wedding != null && wedding.creator.id == Id){
+                _context.Wedding.Remove(wedding);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Dashboard");
+        }
+
+        [Route("show/{id}")]
+        public IActionResult Show(int id){
+            int? Id = HttpContext.Session.GetInt32("Id");
+            if(Id == null)
+            {
+                return RedirectToAction("Index");
+            }
+            var wedding = _context.Wedding.Include( u => u.creator ).Include(u => u.attendees ).ThenInclude(u => u.user ).SingleOrDefault(u => u.id == id);
+            ViewBag.wedding = wedding;
+            return View("Wedding");
         }
     }
 }

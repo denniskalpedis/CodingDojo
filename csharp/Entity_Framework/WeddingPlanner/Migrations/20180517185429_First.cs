@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace WeddingPlanner.Migrations
 {
-    public partial class FirstMigration : Migration
+    public partial class First : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,6 +15,7 @@ namespace WeddingPlanner.Migrations
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    created_at = table.Column<DateTime>(nullable: false),
                     email = table.Column<string>(nullable: true),
                     first_name = table.Column<string>(nullable: true),
                     last_name = table.Column<string>(nullable: true),
@@ -33,7 +34,8 @@ namespace WeddingPlanner.Migrations
                     id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     address = table.Column<string>(nullable: true),
-                    date = table.Column<DateTime>(nullable: false),
+                    created_at = table.Column<DateTime>(nullable: false),
+                    date = table.Column<DateTime>(nullable: true),
                     updated_at = table.Column<DateTime>(nullable: false),
                     userid = table.Column<int>(nullable: true),
                     wedderone = table.Column<string>(nullable: true),
@@ -56,6 +58,7 @@ namespace WeddingPlanner.Migrations
                 {
                     id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    created_at = table.Column<DateTime>(nullable: false),
                     updated_at = table.Column<DateTime>(nullable: false),
                     userid = table.Column<int>(nullable: true),
                     weddingid = table.Column<int>(nullable: true)

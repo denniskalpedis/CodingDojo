@@ -2,15 +2,43 @@
 <h1>Welcome to the Wedding Planner</h1>
 <p><a href="logout">Log Out</a></p>
 
-<a href="/AddWedding"><button>New Wedding</button></a>
-@foreach(var wedding in ViewBag.weddings){
-    <h2>@wedding.wedderone & @wedding.weddertwo</h2>
-    <h3>@wedding.attendees.Count</h3>
-    @if(@wedding.creator == ViewBag.user){
-        <p>delete</p>
-    } else if (@wedding.attendees.Count > 0 && @wedding.attendees.Contains(ViewBag.user) ) {
-        <p>Un-RSVP</p>
-    } else {
-        <p>RSVP</p>
-    }
+
+@if(ViewBag.weddings != null){
+    <table class="table table-bordered table-hover">
+        <div class="row">
+            <thead>
+                <tr>
+                    <div class="col"><th>Wedding</th></div>
+                    <div class="col"><th>Date</th></div>
+                    <div class="col"><th>Guests</th></div>
+                    <div class="col"><th>Action</th></div>
+                </tr>
+            </thead>
+        </div>
+        @foreach(var wedding in ViewBag.weddings){
+            bool attending = false;
+            <div class="row">
+                <tr>
+                    <td><a href="show/@wedding.id">@wedding.wedderone & @wedding.weddertwo</a></td>
+                    <td>@wedding.date.ToString("MM/dd/yyyy")</td>
+                    <td>@wedding.attendees.Count</td>
+                    
+                    @foreach(var attendee in wedding.attendees){
+                        @if(attendee.userid == ViewBag.user.id){
+                            attending = true;
+                        }
+                    }
+                    @if(@wedding.creator == ViewBag.user){
+                        <td><a href="delete/@wedding.id">delete</a></td>
+                    } else if (attending) {
+                        <td><a href="UNRSVP/@wedding.id">Un-RSVP</a></td>
+                    } else {
+                        <td><a href="RSVP/@wedding.id">RSVP</a></td>
+                    }
+                </tr>
+            </div>
+        }
+    </table>
+
+    <a href="/AddWedding"><button>New Wedding</button></a>
 }

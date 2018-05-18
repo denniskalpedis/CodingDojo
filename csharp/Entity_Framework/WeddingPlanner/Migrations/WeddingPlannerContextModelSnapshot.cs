@@ -25,6 +25,8 @@ namespace WeddingPlanner.Migrations
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<DateTime>("created_at");
+
                     b.Property<DateTime>("updated_at");
 
                     b.Property<int?>("userid");
@@ -44,6 +46,8 @@ namespace WeddingPlanner.Migrations
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("created_at");
 
                     b.Property<string>("email");
 
@@ -67,7 +71,9 @@ namespace WeddingPlanner.Migrations
 
                     b.Property<string>("address");
 
-                    b.Property<DateTime>("date");
+                    b.Property<DateTime>("created_at");
+
+                    b.Property<DateTime?>("date");
 
                     b.Property<DateTime>("updated_at");
 
@@ -87,18 +93,18 @@ namespace WeddingPlanner.Migrations
             modelBuilder.Entity("WeddingPlanner.Models.RSVP", b =>
                 {
                     b.HasOne("WeddingPlanner.Models.User", "user")
-                        .WithMany()
+                        .WithMany("weddings")
                         .HasForeignKey("userid");
 
                     b.HasOne("WeddingPlanner.Models.Wedding", "wedding")
-                        .WithMany()
+                        .WithMany("attendees")
                         .HasForeignKey("weddingid");
                 });
 
             modelBuilder.Entity("WeddingPlanner.Models.Wedding", b =>
                 {
                     b.HasOne("WeddingPlanner.Models.User", "creator")
-                        .WithMany("weddings")
+                        .WithMany()
                         .HasForeignKey("userid");
                 });
 #pragma warning restore 612, 618
