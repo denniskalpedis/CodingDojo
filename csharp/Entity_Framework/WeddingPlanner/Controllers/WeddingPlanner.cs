@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using Microsoft.AspNetCore.Identity;
 using WeddingPlanner.Models;
+using System;
 
 namespace WeddingPlanner.Controllers{
 	// [Route("/WeddingPlanner")]
@@ -120,6 +121,10 @@ namespace WeddingPlanner.Controllers{
             if(Id == null)
             {
                 return RedirectToAction("Index");
+            }
+            if(model.date < DateTime.Now){
+                ModelState.AddModelError("date", "A date can not be in the past.");
+                return View("AddWedding");
             }
             if(ModelState.IsValid){
                 Wedding newwedding = new Wedding{
