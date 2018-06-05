@@ -40,6 +40,7 @@ function addMinHeap(arr, val) {
     return arr;
 }
 function removeFirst(arr){
+    var first = arr[1];
     if(arr[2] == null){
         return arr;
     }else if(arr[3] == null) {
@@ -61,6 +62,7 @@ function removeFirst(arr){
         return arr;
     }
     return arr;
+    //return first;
 };
 var array = [];
 addMinHeap(array, 2);

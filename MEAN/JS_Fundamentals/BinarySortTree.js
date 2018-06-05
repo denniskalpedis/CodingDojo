@@ -66,12 +66,34 @@ function bst() {
         }
         return false;
     };
+    this.height = function(){
+        current = this.root;
+        var count = 0;
+        var longest = 0;
+        length(count, current);
+        function length(num, current){
+            if(current == null){
+                if (longest < num){
+                    longest = num;
+                    return num;
+                }else{
+                    return;
+                }
+            } else {
+                num++;
+                length(num, current.left);
+                length(num, current.right);
+            }
+        }
+        return longest;
+    };
 }
 function Node(val) {
     this.value = val;
     this.left = null;
     this.right = null;
 }
+
 var starting = new bst();
 starting.add(10);
 starting.add(8);
@@ -83,6 +105,9 @@ starting.add(23);
 starting.add(42);
 starting.add(4);
 starting.add(12);
+starting.add(3);
+starting.add(2);
 console.log(starting.contains(5));
 console.log(starting.min());
+console.log(starting.height());
 console.log("size is " + starting.bigsize());
