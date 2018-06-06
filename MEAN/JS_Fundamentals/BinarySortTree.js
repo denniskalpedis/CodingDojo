@@ -87,6 +87,57 @@ function bst() {
         }
         return longest;
     };
+    this.arrtoBST = function(arr){
+        arr.sort(function(a,b){return a - b});
+        mid = ((Math.floor(arr.length / 2)) - 1);
+        this.add(arr[mid]);
+        console.log(arr[mid]);
+        for(let i = 1; i <= (mid + 1); i++){
+            if(arr[mid+i] != undefined){
+                this.add(arr[mid+i]);
+                console.log(arr[mid+i]);
+            }
+            if(arr[mid-i] != undefined){
+                this.add(arr[mid-i]);
+                console.log(arr[mid-i]);
+            }
+        }
+        console.log(arr);
+        console.log("made BST!");
+        return;
+    };
+    this.isBalanced = function(){
+        current = this.root;
+        console.log(current.value);
+        var count = 0;
+        var longest = [];
+        length(count, current);
+        function length(num, current){
+            num++;
+            // console.log(current.value);
+            // console.log(current.left);
+            // console.log(current.right);
+            // console.log(num);
+            if(current == null){
+                return;
+            }
+            if(current.left == null && current.right == null){
+                console.log(longest);
+                longest.push(num);
+                console.log(current.value);
+                console.log(num);
+                console.log(current.left);
+                console.log(current.right);
+                return;
+            }else{
+                console.log(current.value);
+                console.log(num);
+                length(num, current.left);
+                length(num, current.right);
+            }
+        }
+        console.log(longest);
+    };
 }
 function Node(val) {
     this.value = val;
@@ -111,3 +162,7 @@ console.log(starting.contains(5));
 console.log(starting.min());
 console.log(starting.height());
 console.log("size is " + starting.bigsize());
+var newBST = new bst();
+newBST.arrtoBST([4,23,73,12,5,1,35,684,93,34,13,72,24,69,65,56]);
+console.log("size is " + newBST.bigsize());
+newBST.isBalanced();
