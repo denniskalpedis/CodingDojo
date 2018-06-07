@@ -19,7 +19,7 @@ app.get("/dog/3", function (request, response){
     response.render('details', {dog : info});
 });
 app.get("/dog/4", function (request, response){
-    var info = {name: "Spot", food: "Chicken", age: "1", toys: ["rubber chicen", "shoe", "Dennis"], image: "pit-bull.jpg"};
+    var info = {name: "Ruby", food: "Chicken", age: "1", toys: ["rubber chicken", "shoe", "Dennis"], image: "pit-bull.jpg"};
     response.render('details', {dog : info});
 });
 app.get("/cars/new", function (request, response){
