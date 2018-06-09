@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+    <title>Survey Form</title>
+</head>
+<body>
+    <div id="socket"><span id="form-data"></span><br><br><span id="random"></span></div>
+    <form action="/submit" method="POST">
+        Your Name: <input type="text" name="name"> <br>
+        Dojo Location: <select name="location" id="">
+            <option value="Mountain View">Mountain View</option>
+            <option value="Seattle, WA">Seattle, WA</option>
+            <option value="Chicago">Chicago</option>
+        </select><br>
+        Favorite Language: <select name="language" id="">
+            <option value="Javascript">Javascript</option>
+            <option value="C#">C#</option>
+            <option value="Python">Python</option>
+        </select><br>
+        Comment (optional): <textarea name="comment" id="" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
