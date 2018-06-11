@@ -33,12 +33,12 @@ app.get("/", function (req, response) {
 
     response.render('index');
 });
-app.post("/submit", function (req, response) {
-    console.log(req.body);
-    response.redirect('/result');
-});
-app.get("/result", function (req, response) {
-    response.render('results', {
-        test:"test"
-    });
-});
+// app.post("/submit", function (req, response) {
+//     console.log(req.body);
+//     response.redirect('/result');
+// });
+// app.get("/result", function (req, response) {
+//     response.render('results', {
+//         test:"test"
+//     });
+// });
