@@ -13,7 +13,4 @@ $(document). ready(function (){
     {
         socket.emit('reset');
     });
-    // $("#form1").submit(function(e){
-    //     e.preventDefault();
-    // });
 });

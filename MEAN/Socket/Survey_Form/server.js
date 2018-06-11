@@ -11,10 +11,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 io.on('connection', function (socket) {
-
-    // socket.emit('greeting', {
-        // msg: 'Greetings, from server Node, brought to you by Sockets! -Server'
-    // });
     socket.on('posting_form', function (data) {
         socket.emit('updated_message', {msg: 
             "You emitted the following information to the server:{name: '"
@@ -33,12 +29,3 @@ app.get("/", function (req, response) {
 
     response.render('index');
 });
-// app.post("/submit", function (req, response) {
-//     console.log(req.body);
-//     response.redirect('/result');
-// });
-// app.get("/result", function (req, response) {
-//     response.render('results', {
-//         test:"test"
-//     });
-// });
