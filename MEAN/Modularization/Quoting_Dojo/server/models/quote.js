@@ -5,3 +5,4 @@ var quoteschema = new mongoose.Schema({
     {timestamps: true}
 );
 mongoose.model('Quotes', quoteschema);
+var Quotes = mongoose.model('Quotes');

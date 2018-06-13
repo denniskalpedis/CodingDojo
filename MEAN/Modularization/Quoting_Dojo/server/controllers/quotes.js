@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
- Quotes = mongoose.model('Quotes');
+var Quotes = mongoose.model('Quotes');
 module.exports = {
     index: function(request, response){
         response.render('index');
