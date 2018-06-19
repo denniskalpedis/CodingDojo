@@ -1,0 +1,32 @@
+<h1>Restful Tasks API</h1>
+<div>
+  <span>New Tasks</span>
+  <form (submit)="path()">
+    <label for="">Title</label><input type="text" name="title"><br>
+    <label for="">Description</label><input type="text" name="description">
+    <input type="submit" value="Create">
+  </form>
+</div>
+<div class="row">
+  <!-- <button (click)="getTasksFromService()">GET ALL TASKS</button> -->
+  <div *ngIf="tasks" class="col-4">
+    <div *ngFor="let task of tasks" class="m-3 row border border-info bg-light p-3">
+      <div class="col">
+        <h5>{{task.title}}</h5><br>
+        <h6>{{task.description}}</h6>
+      </div>
+      <div class="col">
+        <button (click)="getTaskFromService(task['_id'])" class="btn-sm btn-info m-2 btn-block col-6">EDIT</button><br>
+        <button (click)="deleteTaskFromService(task['_id'])" class="btn-sm btn-danger m-2 btn-block col-6">DELETE</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <span>Edit a task</span>
+    <form (submit)="path()">
+      <label for="">Title</label><input type="text" name="title"><br>
+      <label for="">Description</label><input type="text" name="description">
+      <input type="submit" value="EDIT">
+    </form>
+  </div>
+</div>
