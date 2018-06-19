@@ -43,16 +43,12 @@ module.exports = {
         });
     },
     taskUpdate: function(request, response){
-        Tasks.findOne({_id: request.params.id}, function(err, tasks){
-            tasks = Tasks(request.body);
-            tasks.save(function(err){
+        Tasks.update({_id: request.params.id}, {$set : request.body}, function(err, tasks){
             if(err){
                 response.json({message: "error", error: "DANGER WILL ROBINSON!"});
             } else {
-                response.json({message: "GREAT SUCCESS", updated: request.params.id});
+                response.json({message: "GREAT SUCCESS", tasks: tasks});
             }
-            });
-            
         });
     }
 };
