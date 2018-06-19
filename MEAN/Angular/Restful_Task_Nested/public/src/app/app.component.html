@@ -1,0 +1,11 @@
+<h1>Restful Tasks API</h1>
+<div>
+  <button (click)="getTasksFromService()">GET ALL TASKS</button>
+  <ng-container *ngIf="tasks">
+    <div *ngFor="let task of tasks" class="m-3">
+      {{task.title}}
+      <button (click)="getTaskFromService(task._id)" class="btn btn-warning btn-circle btn-lg">Show</button>
+    </div>
+  </ng-container>
+  <app-single *ngIf="singleTask" [taskToShow]="singleTask"></app-single>
+</div>
