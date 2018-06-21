@@ -1,0 +1,8 @@
+<a [routerLink]="['/']">Home</a>
+Add this author
+name:
+<form (submit)="add()" method="POST">
+  <input type="text" name="name" [(ngModel)]="author.name">
+  <button [routerLink]="['/']">Cancel</button>
+  <input type="submit" value="Submit">
+</form>

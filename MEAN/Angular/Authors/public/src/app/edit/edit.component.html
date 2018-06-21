@@ -1,0 +1,8 @@
+<a [routerLink]="['/']">Home</a>
+Edit this author
+name:
+<form (submit)="edit()" method="PUT">
+  <input type="text" name="name">
+  <button [routerLink]="['/']">Cancel</button>
+  <input type="submit" value="Submit">
+</form>

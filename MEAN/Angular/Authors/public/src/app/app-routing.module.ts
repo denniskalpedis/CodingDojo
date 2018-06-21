@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ChicagoComponent } from './chicago/chicago.component';
-import { SeattleComponent } from './seattle/seattle.component';
+import { HomeComponent } from './home/home.component';
+import { EditComponent } from './edit/edit.component';
+import { AddComponent } from './add/add.component';
 
 const routes: Routes = [
-  {path: 'chicago',component: ChicagoComponent},
-  {path: 'seattle',component: SeattleComponent},
+  {path: 'edit/*', component: EditComponent},
+  {path: 'add', component: AddComponent},
   // {path: '', pathMatch: 'full', redirectTo: '/chicago'}
-  {path: '', component: ChicagoComponent}
+  {path: '', component: HomeComponent}
 ];
 
 @NgModule({
