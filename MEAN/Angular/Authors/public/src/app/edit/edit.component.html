@@ -1,8 +1,9 @@
-<a [routerLink]="['/']">Home</a>
+<a [routerLink]="['/']">Home</a><br>
 Edit this author
 name:
 <form (submit)="edit()" method="PUT">
-  <input type="text" name="name">
+  <input type="text" name="name" [(ngModel)]="author.name" #name="ngModel" required minlength="3">
+  <div *ngIf="!name.valid">First name is require and must be more than 3 letters!</div>
   <button [routerLink]="['/']">Cancel</button>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit" [disabled]="!name.valid">
 </form>

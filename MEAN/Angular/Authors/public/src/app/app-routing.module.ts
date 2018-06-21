@@ -5,9 +5,8 @@ import { EditComponent } from './edit/edit.component';
 import { AddComponent } from './add/add.component';
 
 const routes: Routes = [
-  {path: 'edit/*', component: EditComponent},
+  {path: 'edit/:id', component: EditComponent},
   {path: 'add', component: AddComponent},
-  // {path: '', pathMatch: 'full', redirectTo: '/chicago'}
   {path: '', component: HomeComponent}
 ];
 

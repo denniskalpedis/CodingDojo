@@ -7,9 +7,9 @@
       <th>Actions available</th>
     </tr>
     <tr *ngFor="let author of authors">
-      <td>author.name</td>
-      <td><button [routerLink]="['/edit/author.id']">Edit</button></td>
-      <td><button [routerLink]="['/delete/author.id']">Delete</button></td>
+      <td>{{author.name}}</td>
+      <td><button [routerLink]="['/edit/'+author._id]">Edit</button></td>
+      <td><button (click)="delete(author._id)">Delete</button></td>
     </tr>
   </table>
 </div>

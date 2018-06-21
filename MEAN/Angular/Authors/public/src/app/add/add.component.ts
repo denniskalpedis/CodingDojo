@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpService} from '../http.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add',
@@ -9,7 +10,7 @@ import {HttpService} from '../http.service';
 export class AddComponent implements OnInit {
   author :any
 
-  constructor(private _httpService: HttpService) {}
+  constructor(private _httpService: HttpService, private _router: Router) {}
 
   ngOnInit() {
     this.author = {name: ""};
@@ -17,10 +18,7 @@ export class AddComponent implements OnInit {
   add(){
     let observable = this._httpService.addAuthor(this.author);
     observable.subscribe(data => {
-      console.log("______________")
-      console.log(data);
-      this.author = {name: ""}
-      //this.getAuthors;
+      this._router.navigate(['/']);
     })
   }
 
