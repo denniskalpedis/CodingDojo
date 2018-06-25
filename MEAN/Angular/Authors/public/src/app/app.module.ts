@@ -9,13 +9,15 @@ import { AddComponent } from './add/add.component';
 import { HttpService } from './http.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
+import { MemoryComponent } from './memory/memory.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     EditComponent,
-    AddComponent
+    AddComponent,
+    MemoryComponent
   ],
   imports: [
     BrowserModule,

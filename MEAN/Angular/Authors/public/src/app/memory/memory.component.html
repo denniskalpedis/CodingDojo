@@ -1,0 +1,9 @@
+Player 1 Score: {{p1Score}} <br>
+<div *ngFor="let card of testing; let i = index" class="d-inline-block col-2">
+  <div class="bg-secondary m-3 d-inline-block card" (click)="onClick($event)" id={{i}} [ngStyle]="{'background-image':'url('+testing[i].active+')','background-size':'100px 100px','outline':currentPlayer}"></div>
+</div>
+<!-- <div *ngFor="let card in testing" class="bg-secondary m-3 d-inline-block card" (click)="onClick($event)" id="card" [ngStyle]="{'background-image':'url('+testing[card].active+')','background-size':'100px 100px'}"></div> -->
+<!-- <div class="bg-secondary m-3 d-inline-block card" (click)="onClick($event)" id="1" [ngStyle]="{'background-image':'url('+testing[1].active+')','background-size':'100px 100px'}"></div>
+<br>
+<div class="bg-secondary m-3 d-inline-block card" (click)="onClick($event)" id="2" [ngStyle]="{'background-image':'url('+testing[2].active+')','background-size':'100px 100px'}"></div>
+<div class="bg-secondary m-3 d-inline-block card" (click)="onClick($event)" id="3" [ngStyle]="{'background-image':'url('+testing[3].active+')','background-size':'100px 100px'}"></div> -->
