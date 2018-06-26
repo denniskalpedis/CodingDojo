@@ -13,6 +13,7 @@ export class MemoryComponent implements OnInit {
   images = [];
   testing = [];
   p1Score = 0;
+  p2Score = 0;
   firstPick;
   secondPick;
   waiting = false;
@@ -32,7 +33,7 @@ export class MemoryComponent implements OnInit {
     // this.layout = [0,0,1,1,2,2,3,3,4,4,5,5];
     this.shuffle(this.layout);
     for(let i = 0; i <this.layout.length; i++){
-      this.testing.push({match: this.layout[i], image: this.images[this.layout[i]], active: "none"});
+      this.testing.push({match: this.layout[i], image: this.images[this.layout[i]], active: "none", player:0});
     }
     // this.testing = [{match:1, image:"/assets/images/chicago.png", active:"none"},
     //   {match:2, image:"/assets/images/seattle.png", active:"none"},
@@ -50,20 +51,28 @@ export class MemoryComponent implements OnInit {
     console.log(event.srcElement.classList);
     if(this.testing[event.target.id].active == "none" && !this.waiting){
       // event.srcElement.classList.push("p1");
-      angular.element('#' +event.target.id).addClass("alpha");
+      // angular.element('#' +event.target.id).addClass("alpha");
       if(this.firstPick){
         this.secondPick = event.target.id;
         this.testing[event.target.id].active = this.testing[event.target.id].image
         console.log(this.firstPick);
         console.log(this.secondPick);
         if (this.testing[this.firstPick].match == this.testing[this.secondPick].match ){
+          if (this.turn == 1){
+            this.p1Score ++;
+          } else {
+            this.p2Score ++;
+          }
           
-          this.p1Score ++;
+          this.testing[this.firstPick].player = this.turn;
+          this.testing[this.secondPick].player = this.turn;
           this.firstPick= null;
           this.secondPick= null;
+          
           console.log("WIN!")
           return true;
         } else {
+          
           this.waiting = true;
           console.log("LOSE!");
           // this.testing[event.target.id].active = this.testing[event.target.id].image
@@ -71,7 +80,12 @@ export class MemoryComponent implements OnInit {
           this.testing[this.secondPick].active = "none";
           this.firstPick= null;
           this.secondPick= null;
-          this.waiting = false; }, 1500);
+          this.waiting = false;
+          if(this.turn == 1){
+            this.turn = 2;
+          }else{
+            this.turn = 1;
+          }; }, 1500);
           // this.testing[this.firstPick].active = "none";
           // this.testing[this.secondPick].active = "none";
           // this.firstPick= null;
