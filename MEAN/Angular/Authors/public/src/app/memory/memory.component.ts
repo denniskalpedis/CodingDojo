@@ -47,7 +47,10 @@ export class MemoryComponent implements OnInit {
   //   this.waiting = false;
   // }
   onClick(event){
+    console.log(event.srcElement.classList);
     if(this.testing[event.target.id].active == "none" && !this.waiting){
+      // event.srcElement.classList.push("p1");
+      angular.element('#' +event.target.id).addClass("alpha");
       if(this.firstPick){
         this.secondPick = event.target.id;
         this.testing[event.target.id].active = this.testing[event.target.id].image
